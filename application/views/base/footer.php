@@ -5,7 +5,7 @@
          <div class="col-md-6 col-lg-4 col-xl-3">
             <div class="footer-item">
                <h2 class="fw-bold mb-3"><span class="text-primary mb-0">Arena</span><span class="text-secondary">Bocil</span></h2>
-               <p class="mb-4">There cursus massa at urnaaculis estieSed aliquamellus vitae ultrs condmentum leo massamollis its estiegittis miristum.</p>
+               <p class="mb-4">Kami menyediakan lingkungan yang aman dan menyenangkan untuk anak-anak, di mana mereka bisa bermain, belajar, dan tumbuh bersama.</p>
                <div class="border border-primary p-3 rounded bg-light">
                   <h5 class="mb-3">Newsletter</h5>
                   <div class="position-relative mx-auto border border-primary rounded" style="max-width: 400px;">
