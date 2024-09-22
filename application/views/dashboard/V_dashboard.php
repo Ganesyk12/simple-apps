@@ -1,549 +1,385 @@
-<div class="container-scroller">
-   <div class="row p-0 m-0 proBanner" id="proBanner">
-      <div class="col-md-12 p-0 m-0">
-         <div class="card-body card-body-padding d-flex align-items-center justify-content-between">
-            <div class="ps-lg-1">
-               <div class="d-flex align-items-center justify-content-between">
-                  <p class="mb-0 font-weight-medium me-3 buy-now-text">Free 24/7 customer support, updates, and more with this template!</p>
-                  <a href="https://www.bootstrapdash.com/product/stellar-admin-template/" target="_blank" class="btn me-2 buy-now-btn border-0">Buy Now</a>
-               </div>
-            </div>
-            <div class="d-flex align-items-center justify-content-between">
-               <a href="https://www.bootstrapdash.com/product/stellar-admin-template/"><i class="icon-home me-3 text-white"></i></a>
-               <button id="bannerClose" class="btn border-0 p-0">
-                  <i class="icon-close text-white me-0"></i>
+<div class="container-fluid py-5 hero-header wow fadeIn" data-wow-delay="0.1s">
+   <div class="container py-5">
+      <div class="row g-5">
+         <div class="col-lg-7 col-md-12">
+            <h1 class="mb-3 text-primary">We Care Your Baby</h1>
+            <h1 class="mb-5 display-1 text-white">The Best Play Area For Your Kids</h1>
+            <a href="" class="btn btn-primary px-4 py-3 px-md-5  me-4 btn-border-radius">Get Started</a>
+            <a href="" class="btn btn-primary px-4 py-3 px-md-5 btn-border-radius">Learn More</a>
+         </div>
+      </div>
+   </div>
+</div>
+<!-- Hero End -->
+
+
+<!-- About Start -->
+<div class="container-fluid py-5 about bg-light">
+   <div class="container py-5">
+      <div class="row g-5 align-items-center">
+         <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="video border">
+               <button type="button" class="btn btn-play" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
+                  <span></span>
                </button>
             </div>
          </div>
+         <div class="col-lg-7 wow fadeIn" data-wow-delay="0.3s">
+            <h4 class="text-primary mb-4 border-bottom border-primary border-2 d-inline-block p-2 title-border-radius">About Us</h4>
+            <h1 class="text-dark mb-4 display-5">We Learn Smart Way To Build Bright Futute For Your Children</h1>
+            <p class="text-dark mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+            </p>
+            <div class="row mb-4">
+               <div class="col-lg-6">
+                  <h6 class="mb-3"><i class="fas fa-check-circle me-2"></i>Sport Activites</h6>
+                  <h6 class="mb-3"><i class="fas fa-check-circle me-2 text-primary"></i>Outdoor Games</h6>
+                  <h6 class="mb-3"><i class="fas fa-check-circle me-2 text-secondary"></i>Nutritious Foods</h6>
+               </div>
+               <div class="col-lg-6">
+                  <h6 class="mb-3"><i class="fas fa-check-circle me-2"></i>Highly Secured</h6>
+                  <h6 class="mb-3"><i class="fas fa-check-circle me-2 text-primary"></i>Friendly Environment</h6>
+                  <h6><i class="fas fa-check-circle me-2 text-secondary"></i>Qualified Teacher</h6>
+               </div>
+            </div>
+            <a href="" class="btn btn-primary px-5 py-3 btn-border-radius">More Details</a>
+         </div>
       </div>
    </div>
-   <!-- partial:partials/_navbar.html -->
-   <?php $this->load->view('base/navbar'); ?>
-   <!-- partial -->
-   <div class="container-fluid page-body-wrapper">
-      <!-- partial:partials/_sidebar.html -->
-      <?php $this->load->view('base/sidebar'); ?>
-      <!-- partial -->
-      <div class="main-panel">
-         <div class="content-wrapper">
-            <div class="row">
-               <div class="col-md-8 grid-margin stretch-card">
-                  <div class="card">
-                     <div class="card-body performane-indicator-card">
-                        <div class="d-sm-flex">
-                           <h4 class="card-title flex-shrink-1">Performance Indicator</h4>
-                           <p class="m-sm-0 ms-sm-auto flex-shrink-0">
-                              <span class="data-time-range ms-0">7d</span>
-                              <span class="data-time-range active">2w</span>
-                              <span class="data-time-range">1m</span>
-                              <span class="data-time-range">3m</span>
-                              <span class="data-time-range">6m</span>
-                           </p>
-                        </div>
-                        <div class="d-sm-flex flex-wrap mt-3">
-                           <div class="d-flex align-items-center">
-                              <span class="dot-indicator bg-primary ms-2"></span>
-                              <p class="mb-0 ms-2 text-muted font-weight-semibold">Complaints (2098)</p>
-                           </div>
-                           <div class="d-flex align-items-center">
-                              <span class="dot-indicator bg-info ms-2"></span>
-                              <p class="mb-0 ms-2 text-muted font-weight-semibold"> Task Done (1123)</p>
-                           </div>
-                           <div class="d-flex align-items-center">
-                              <span class="dot-indicator bg-danger ms-2"></span>
-                              <p class="mb-0 ms-2 text-muted font-weight-semibold">Attends (876)</p>
-                           </div>
-                        </div>
-                        <div class="dotted-chart-height">
-                           <canvas id="performance-indicator-chart" class="mt-5"></canvas>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-4 grid-margin stretch-card">
-                  <div class="card">
-                     <div class="card-body">
-                        <h4 class="card-title">Sessions by channel</h4>
-                        <div class="aligner-wrapper py-3">
-                           <div class="doughnut-chart-height">
-                              <canvas id="sessionsDoughnutChart" height="210"></canvas>
-                           </div>
-                           <div class="wrapper d-flex flex-column justify-content-center absolute absolute-center">
-                              <h2 class="text-center mb-0 font-weight-bold">8.234</h2>
-                              <small class="d-block text-center text-muted  font-weight-semibold mb-0">Total Leads</small>
-                           </div>
-                        </div>
-                        <div class="wrapper mt-4 d-flex flex-wrap align-items-cente">
-                           <div class="d-flex">
-                              <span class="square-indicator bg-danger ms-2"></span>
-                              <p class="mb-0 ms-2">Assigned</p>
-                           </div>
-                           <div class="d-flex">
-                              <span class="square-indicator bg-success ms-2"></span>
-                              <p class="mb-0 ms-2">Not Assigned</p>
-                           </div>
-                           <div class="d-flex">
-                              <span class="square-indicator bg-warning ms-2"></span>
-                              <p class="mb-0 ms-2">Reassigned</p>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
+</div>
+<!-- Modal Video -->
+<div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+   <div class="modal-dialog">
+      <div class="modal-content rounded-0">
+         <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Youtube Video</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+         <div class="modal-body">
+            <!-- 16:9 aspect ratio -->
+            <div class="ratio ratio-16x9">
+               <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always"
+                  allow="autoplay"></iframe>
             </div>
-            <!-- Quick Action Toolbar Starts-->
-            <div class="row quick-action-toolbar">
-               <div class="col-md-12 grid-margin">
-                  <div class="card">
-                     <div class="card-header d-block d-md-flex">
-                        <h5 class="mb-0">Quick Actions</h5>
-                        <p class="ms-auto mb-0">How are your active users trending overtime?<i class="icon-bulb"></i></p>
-                     </div>
-                     <div class="d-md-flex row m-0 quick-action-btns" role="group" aria-label="Quick action buttons">
-                        <div class="col-sm-6 col-md-3 p-3 text-center btn-wrapper">
-                           <button type="button" class="btn px-0"> <i class="icon-user me-2"></i> Add Client</button>
-                        </div>
-                        <div class="col-sm-6 col-md-3 p-3 text-center btn-wrapper">
-                           <button type="button" class="btn px-0"><i class="icon-docs me-2"></i> Create Quote</button>
-                        </div>
-                        <div class="col-sm-6 col-md-3 p-3 text-center btn-wrapper">
-                           <button type="button" class="btn px-0"><i class="icon-folder me-2"></i> Enter Payment</button>
-                        </div>
-                        <div class="col-sm-6 col-md-3 p-3 text-center btn-wrapper">
-                           <button type="button" class="btn px-0"><i class="icon-book-open me-2"></i>Create Invoice</button>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <!-- Quick Action Toolbar Ends-->
-            <div class="row">
-               <div class="col-md-12 grid-margin stretch-card">
-                  <div class="card">
-                     <div class="card-body">
-                        <div class="d-sm-flex align-items-center mb-4">
-                           <h4 class="card-title mb-sm-0">Products Inventory</h4>
-                           <a href="#" class="text-dark ms-auto mb-3 mb-sm-0"> View all Products</a>
-                        </div>
-                        <div class="table-responsive border rounded p-1">
-                           <table class="table">
-                              <thead>
-                                 <tr>
-                                    <th class="font-weight-bold">Store ID</th>
-                                    <th class="font-weight-bold">Amount</th>
-                                    <th class="font-weight-bold">Gateway</th>
-                                    <th class="font-weight-bold">Created at</th>
-                                    <th class="font-weight-bold">Paid at</th>
-                                    <th class="font-weight-bold">Status</th>
-                                 </tr>
-                              </thead>
-                              <tbody>
-                                 <tr>
-                                    <td>
-                                       <img class="img-sm rounded-circle" src="<?= base_url('assets') ?>/images/faces/face1.jpg" alt="profile image"> Katie Holmes
-                                    </td>
-                                    <td>$3621</td>
-                                    <td><img src="<?= base_url('assets') ?>/images/dashboard/alipay.png" alt="alipay" class="gateway-icon me-2"> alipay</td>
-                                    <td>04 Jun 2019</td>
-                                    <td>18 Jul 2019</td>
-                                    <td>
-                                       <div class="badge badge-success p-2">Paid</div>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td>
-                                       <img class="img-sm rounded-circle" src="<?= base_url('assets') ?>/images/faces/face2.jpg" alt="profile image"> Minnie Copeland
-                                    </td>
-                                    <td>$6245</td>
-                                    <td><img src="<?= base_url('assets') ?>/images/dashboard/paypal.png" alt="alipay" class="gateway-icon me-2"> Paypal</td>
-                                    <td>25 Sep 2019</td>
-                                    <td>07 Oct 2019</td>
-                                    <td>
-                                       <div class="badge badge-danger p-2">Pending</div>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td>
-                                       <img class="img-sm rounded-circle" src="<?= base_url('assets') ?>/images/faces/face3.jpg" alt="profile image"> Rodney Sims
-                                    </td>
-                                    <td>$9265</td>
-                                    <td><img src="<?= base_url('assets') ?>/images/dashboard/alipay.png" alt="alipay" class="gateway-icon me-2"> alipay</td>
-                                    <td>12 dec 2019</td>
-                                    <td>26 Aug 2019</td>
-                                    <td>
-                                       <div class="badge badge-warning p-2">Failed</div>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td>
-                                       <img class="img-sm rounded-circle" src="<?= base_url('assets') ?>/images/faces/face4.jpg" alt="profile image"> Carolyn Barker
-                                    </td>
-                                    <td>$2263</td>
-                                    <td><img src="<?= base_url('assets') ?>/images/dashboard/alipay.png" alt="alipay" class="gateway-icon me-2"> alipay</td>
-                                    <td>30 Sep 2019</td>
-                                    <td>20 Oct 2019</td>
-                                    <td>
-                                       <div class="badge badge-success p-2">Paid</div>
-                                    </td>
-                                 </tr>
-                              </tbody>
-                           </table>
-                        </div>
-                        <div class="d-flex mt-4 flex-wrap align-items-center">
-                           <p class="text-muted mb-sm-0">Showing 1 to 10 of 57 entries</p>
-                           <nav class="ms-auto">
-                              <ul class="pagination separated pagination-info mb-sm-0">
-                                 <li class="page-item"><a href="#" class="page-link"><i class="icon-arrow-left"></i></a></li>
-                                 <li class="page-item active"><a href="#" class="page-link">1</a></li>
-                                 <li class="page-item"><a href="#" class="page-link">2</a></li>
-                                 <li class="page-item"><a href="#" class="page-link">3</a></li>
-                                 <li class="page-item"><a href="#" class="page-link">4</a></li>
-                                 <li class="page-item"><a href="#" class="page-link"><i class="icon-arrow-right"></i></a></li>
-                              </ul>
-                           </nav>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-xl-8 grid-margin stretch-card">
-                  <div class="card sales-report-country">
-                     <div class="card-body">
-                        <div class="d-md-flex">
-                           <h4 class="card-title">Sales Performance by Country</h4>
-                           <div class="mb-2 m-md-0 ms-md-auto">
-                              <a href="#" class="text-secondary me-3"><i class="icon-cloud-upload me-3"></i> Export File</a>
-                              <a href="#" class="text-secondary me-3"><i class="icon-printer me-3"></i>Print File</a>
-                           </div>
-                        </div>
-                        <div class="row my-xl-3">
-                           <div class="col-md-12 d-md-flex">
-                              <div>
-                                 <h1 class="font-weight-bold mb-0">136,356.00</h1>
-                                 <p class="text-muted">+23 since last year</p>
-                              </div>
-                              <div class="ml-md-3 ms-2">
-                                 <p class="mb-0 mt-2">Sales performance of all states in the world</p>
-                                 <p class="mb-0">This is your most recent earnings for today's date.</p>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="row">
-                           <div class="col-xl-4 pt-3">
-                              <div class="row">
-                                 <div class="pb-xl-3 col-sm-6 col-xl-12 sales-activity">
-                                    <p class="mb-1">Activations</p>
-                                    <h1 class="font-weight-bold mb-0 text-info">156,123</h1>
-                                    <p class="text-muted">Updated-6:16 pm</p>
-                                 </div>
-                                 <div class="pt-xl-3 col-sm-6 col-xl-12 sales-activity">
-                                    <p class="mb-0">Net Revenue</p>
-                                    <h1 class="font-weight-bold mb-0 text-primary">331,520</h1>
-                                    <p class="text-muted pb-0">Updated-5:14 pm</p>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="col-xl-8">
-                              <div id="dashboard-vmap" class="vector-map"></div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-xl-4 grid-margin stretch-card">
-                  <div class="card">
-                     <div class="card-body">
-                        <div class="d-sm-flex align-items-center">
-                           <h4 class="card-title mb-0">Latest Activity</h4>
-                           <a href="#" class="btn btn-outline-info border-0 font-weight-semibold ms-auto p-0 btn-no-hover-bg">View more</a>
-                        </div>
-                        <div class="d-flex mt-4 py-3 border-bottom">
-                           <img class="img-sm rounded-circle" src="<?= base_url('assets') ?>/images/faces/face3.jpg" alt="profile image">
-                           <div class="wrapper ms-2">
-                              <p class="mb-1 font-weight-medium">Mobile Apps Redesign</p>
-                              <small class="text-muted">+23 since last year</small>
-                           </div>
-                           <small class="text-muted ms-auto">10:07PM</small>
-                        </div>
-                        <div class="d-flex py-3 border-bottom">
-                           <img class="img-sm rounded-circle" src="<?= base_url('assets') ?>/images/faces/face2.jpg">
-                           <div class="wrapper ms-2">
-                              <p class="mb-1 font-weight-medium">Inviting Join Apps Cont...</p>
-                              <small class="text-muted">+23 since last year</small>
-                           </div>
-                           <small class="text-muted ms-auto">01:07AM</small>
-                        </div>
-                        <div class="d-flex py-3 border-bottom">
-                           <img class="img-sm rounded-circle" src="<?= base_url('assets') ?>/images/faces/face4.jpg" alt="profile image">
-                           <div class="wrapper ms-2">
-                              <p class="mb-1 font-weight-medium">Website Redesign</p>
-                              <small class="text-muted">+23 since last year</small>
-                           </div>
-                           <small class="text-muted ms-auto">04:42AM</small>
-                        </div>
-                        <div class="d-flex py-3  border-bottom">
-                           <img class="img-sm rounded-circle" src="<?= base_url('assets') ?>/images/faces/face8.jpg">
-                           <div class="wrapper ms-2">
-                              <p class="mb-1 font-weight-medium">Analytics Dashboard</p>
-                              <small class="text-muted">+23 since last year</small>
-                           </div>
-                           <small class="text-muted ms-auto">07:44PM</small>
-                        </div>
-                        <div class="d-flex pt-3">
-                           <img class="img-sm rounded-circle" src="<?= base_url('assets') ?>/images/faces/face7.jpg">
-                           <div class="wrapper ms-2">
-                              <p class="mb-1 font-weight-medium">Great Logo Design</p>
-                              <small class="text-muted">+23 since last year</small>
-                           </div>
-                           <small class="text-muted ms-auto">10:49AM</small>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-md-12 grid-margin">
-                  <div class="card">
-                     <div class="card-body">
-                        <div class="row income-expense-summary-chart-text">
-                           <div class="col-xl-4">
-                              <h5>Income And Expenses Summary</h5>
-                              <p class="small text-muted">A comparison of people who mark themselves of their ineterest from the date range given above. Learn more.</p>
-                           </div>
-                           <div class=" col-md-3 col-xl-2">
-                              <p class="income-expense-summary-chart-legend"> <span style="border-color: #6469df"></span> Total Income </p>
-                              <h3>$ 1,766.00</h3>
-                           </div>
-                           <div class="col-md-3 col-xl-2">
-                              <p class="income-expense-summary-chart-legend"> <span style="border-color: #37ca32"></span> Total Expense </p>
-                              <h3>$ 5,698.30</h3>
-                           </div>
-                           <div class="col-md-6 col-xl-4 d-flex align-items-center">
-                              <div class="input-group ms-auto" id="income-expense-summary-chart-daterange">
-                                 <div class="inpu-group-prepend input-group-text"><i class="icon-calendar"></i></div>
-                                 <input type="text" class="form-control">
-                                 <div class="input-group-prepend input-group-text"><i class="icon-arrow-down"></i></div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="row income-expense-summary-chart mt-3">
-                           <div class="col-md-12">
-                              <div class="ct-chart" id="income-expense-summary-chart"></div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-md-4 grid-margin stretch-card">
-                  <div class="card social-card card-colored twitter-card">
-                     <div class="card-body d-flex flex-wrap align-items-center justify-content-center">
-                        <i class="icon-social-twitter flex-shrink-0"></i>
-                        <div class="wrapper ms-3">
-                           <h5 class="mb-0">Twitter Followers</h5>
-                           <h1 class="mb-0">3200+</h1>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-4 grid-margin stretch-card">
-                  <div class="card social-card card-colored facebook-card">
-                     <div class="card-body d-flex flex-wrap align-items-center justify-content-center">
-                        <i class="icon-social-facebook flex-shrink-0"></i>
-                        <div class="wrapper ms-3">
-                           <h5 class="mb-0">facebook likes</h5>
-                           <h1 class="mb-0">1500+</h1>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-4 grid-margin stretch-card">
-                  <div class="card social-card card-colored instagram-card">
-                     <div class="card-body d-flex flex-wrap align-items-center justify-content-center">
-                        <i class="icon-social-instagram flex-shrink-0"></i>
-                        <div class="wrapper ms-3">
-                           <h5 class="mb-0">Instagram Posts</h5>
-                           <h1 class="mb-0">2320+</h1>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-md-12 grid-margin">
-                  <div class="card">
-                     <div class="card-body">
-                        <div class="row">
-                           <div class="col-md-12">
-                              <div class="d-sm-flex align-items-baseline report-summary-header">
-                                 <h5 class="font-weight-semibold">Report Summary</h5> <span class="ms-auto">Updated Report</span> <button class="btn btn-icons border-0 p-2"><i class="icon-refresh"></i></button>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="row report-inner-cards-wrapper">
-                           <div class=" col-md -6 col-xl report-inner-card">
-                              <div class="inner-card-text">
-                                 <span class="report-title">EXPENSE</span>
-                                 <h4>$32123</h4>
-                                 <span class="report-count"> 2 Reports</span>
-                              </div>
-                              <div class="inner-card-icon bg-success">
-                                 <i class="icon-rocket"></i>
-                              </div>
-                           </div>
-                           <div class="col-md-6 col-xl report-inner-card">
-                              <div class="inner-card-text">
-                                 <span class="report-title">PURCHASE</span>
-                                 <h4>95,458</h4>
-                                 <span class="report-count"> 3 Reports</span>
-                              </div>
-                              <div class="inner-card-icon bg-danger">
-                                 <i class="icon-briefcase"></i>
-                              </div>
-                           </div>
-                           <div class="col-md-6 col-xl report-inner-card">
-                              <div class="inner-card-text">
-                                 <span class="report-title">QUANTITY</span>
-                                 <h4>2650</h4>
-                                 <span class="report-count"> 5 Reports</span>
-                              </div>
-                              <div class="inner-card-icon bg-warning">
-                                 <i class="icon-globe-alt"></i>
-                              </div>
-                           </div>
-                           <div class="col-md-6 col-xl report-inner-card">
-                              <div class="inner-card-text">
-                                 <span class="report-title">RETURN</span>
-                                 <h4>25,542</h4>
-                                 <span class="report-count"> 9 Reports</span>
-                              </div>
-                              <div class="inner-card-icon bg-primary">
-                                 <i class="icon-diamond"></i>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-md-6 col-xl-4 grid-margin stretch-card">
-                  <div class="card sessions-progress-bar-card">
-                     <div class="card-header">
-                        <h4>Sessions by Countries</h4>
-                     </div>
-                     <div class="card-body">
-                        <ul class="dashboard-progress-bar-wrapper m-0">
-                           <li>
-                              <div class="d-flex justify-content-between">
-                                 <h6>1. Netherlands</h6>
-                                 <p class="font-weight-semibold">$380.50 <span class="text-muted font-weight-normal">(1.51%)</span></p>
-                              </div>
-                              <div class="progress progress-md">
-                                 <div class="progress-bar bg-primary" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                              </div>
-                           </li>
-                           <li>
-                              <div class="d-flex justify-content-between">
-                                 <h6>2. United States</h6>
-                                 <p class="font-weight-semibold">$503.20 <span class="text-muted font-weight-normal">(13.45%)</span></p>
-                              </div>
-                              <div class="progress progress-md">
-                                 <div class="progress-bar bg-info" role="progressbar" style="width: 75%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                              </div>
-                           </li>
-                           <li>
-                              <div class="d-flex justify-content-between">
-                                 <h6>3. United kingdom</h6>
-                                 <p class="font-weight-semibold">$421.80 <span class="text-muted font-weight-normal">(1.51%)</span></p>
-                              </div>
-                              <div class="progress progress-md">
-                                 <div class="progress-bar bg-danger" role="progressbar" style="width: 60%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                              </div>
-                           </li>
-                           <li>
-                              <div class="d-flex justify-content-between">
-                                 <h6>4. Canada</h6>
-                                 <p class="font-weight-semibold">$850.30 <span class="text-muted font-weight-normal">(1.51%)</span></p>
-                              </div>
-                              <div class="progress progress-md">
-                                 <div class="progress-bar bg-warning" role="progressbar" style="width: 55%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                              </div>
-                           </li>
-                           <li>
-                              <div class="d-flex justify-content-between">
-                                 <h6>5. Australia</h6>
-                                 <p class="font-weight-semibold">$380.50 <span class="text-muted font-weight-normal">(1.51%)</span></p>
-                              </div>
-                              <div class="progress progress-md">
-                                 <div class="progress-bar bg-success" role="progressbar" style="width: 40%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                              </div>
-                           </li>
-                        </ul>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-6 col-xl-4 grid-margin stretch-card">
-                  <div class="card dashboard-inline-datepicker datepicker-custom">
-                     <div class="card-body">
-                        <div id="dashboard-inline-datepicker"></div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-xl-4 grid-margin stretch-card">
-                  <div class="card quick-status-card">
-                     <div class="card-body">
-                        <h4 class="card-title">Quick Status</h4>
-                        <div class="row">
-                           <div class="col-md-6">
-                              <div id="circle-progress-1"></div>
-                           </div>
-                           <div class="col-md-6">
-                              <div id="circle-progress-2"></div>
-                           </div>
-                        </div>
-                        <div class="row mt-5">
-                           <div class="col-12">
-                              <div class="wrapper py-4 d-flex border-bottom">
-                                 <span class="icon-holder">
-                                    <i class="icon-wallet"></i>
-                                 </span>
-                                 <div class="ms-3">
-                                    <p class="mb-1">My Balance</p>
-                                    <h6 class="mb-0">$5021.00</h6>
-                                 </div>
-                                 <div class="ms-auto"><i class="icon-arrow-down-circle"></i><span class="text-muted ms-2">2.87 %</span></div>
-                              </div>
-                              <div class="wrapper py-4 d-flex">
-                                 <span class="icon-holder">
-                                    <i class="icon-basket-loaded"></i>
-                                 </span>
-                                 <div class="ms-3">
-                                    <p class="mb-1">Sales Revenue</p>
-                                    <h6 class="mb-0"></h6>24,301.00</h6>
-                                 </div>
-                                 <div class="ms-auto"><i class="icon-arrow-down-circle"></i><span class="text-muted ms-2">2.87 %</span></div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
+         </div>
+      </div>
+   </div>
+</div>
+<!-- About End -->
+
+
+<!-- Service Start -->
+<div class="container-fluid service py-5">
+   <div class="container py-5">
+      <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 700px;">
+         <h4 class="text-primary mb-4 border-bottom border-primary border-2 d-inline-block p-2 title-border-radius">What We Do</h4>
+         <h1 class="mb-5 display-3">Thanks To Get Started With Our School</h1>
+      </div>
+      <div class="row g-5">
+         <div class="col-md-6 col-lg-6 col-xl-3 wow fadeIn" data-wow-delay="0.1s">
+            <div class="text-center border-primary border bg-white service-item">
+               <div class="service-content d-flex align-items-center justify-content-center p-4">
+                  <div class="service-content-inner">
+                     <div class="p-4"><i class="fas fa-gamepad fa-6x text-primary"></i></div>
+                     <a href="#" class="h4">Study & Game</a>
+                     <p class="my-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, culpa qui officiis animi Lorem ipsum dolor sit amet,
+                        consectetur adipisicing elit.</p>
+                     <a href="#" class="btn btn-primary text-white px-4 py-2 my-2 btn-border-radius">Read More</a>
                   </div>
                </div>
             </div>
          </div>
-         <!-- content-wrapper ends -->
-         <!-- partial:partials/_footer.html -->
-         <footer class="footer">
-            <div class="d-sm-flex justify-content-center justify-content-sm-between">
-               <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2024 Stellar. All rights reserved. <a href="#"> Terms of use</a><a href="#">Privacy Policy</a></span>
-               <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="icon-heart text-danger"></i></span>
+         <div class="col-md-6 col-lg-6 col-xl-3 wow fadeIn" data-wow-delay="0.3s">
+            <div class="text-center border-primary border bg-white service-item">
+               <div class="service-content d-flex align-items-center justify-content-center p-4">
+                  <div class="service-content-inner">
+                     <div class="p-4"><i class="fas fa-sort-alpha-down fa-6x text-primary"></i></div>
+                     <a href="#" class="h4">A to Z Programs</a>
+                     <p class="my-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, culpa qui officiis animi Lorem ipsum dolor sit amet,
+                        consectetur adipisicing elit.</p>
+                     <a href="#" class="btn btn-primary text-white px-4 py-2 my-2 btn-border-radius">Read More</a>
+                  </div>
+               </div>
             </div>
-         </footer>
-         <!-- partial -->
+         </div>
+         <div class="col-md-6 col-lg-6 col-xl-3 wow fadeIn" data-wow-delay="0.5s">
+            <div class="text-center border-primary border bg-white service-item">
+               <div class="service-content d-flex align-items-center justify-content-center p-4">
+                  <div class="service-content-inner">
+                     <div class="p-4"><i class="fas fa-users fa-6x text-primary"></i></div>
+                     <a href="#" class="h4">Expert Teacher</a>
+                     <p class="my-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, culpa qui officiis animi Lorem ipsum dolor sit amet,
+                        consectetur adipisicing elit.</p>
+                     <a href="#" class="btn btn-primary text-white px-4 py-2 my-2 btn-border-radius">Read More</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-6 col-lg-6 col-xl-3 wow fadeIn" data-wow-delay="0.7s">
+            <div class="text-center border-primary border bg-white service-item">
+               <div class="service-content d-flex align-items-center justify-content-center p-4">
+                  <div class="service-content-inner">
+                     <div class="p-4"><i class="fas fa-user-nurse fa-6x text-primary"></i></div>
+                     <a href="#" class="h4">Mental Health</a>
+                     <p class="my-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, culpa qui officiis animi Lorem ipsum dolor sit amet,
+                        consectetur adipisicing elit.</p>
+                     <a href="#" class="btn btn-primary text-white px-4 py-2 my-2 btn-border-radius">Read More</a>
+                  </div>
+               </div>
+            </div>
+         </div>
       </div>
-      <!-- main-panel ends -->
    </div>
-   <!-- page-body-wrapper ends -->
 </div>
+<!-- Service End -->
+
+
+<!-- Programs Start -->
+<div class="container-fluid program  py-5">
+   <div class="container py-5">
+      <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 700px;">
+         <h4 class="text-primary mb-4 border-bottom border-primary border-2 d-inline-block p-2 title-border-radius">Our Programs</h4>
+         <h1 class="mb-5 display-3">We Offer An Exclusive Program For Kids</h1>
+      </div>
+      <div class="row g-5 justify-content-center">
+         <div class="col-md-6 col-lg-6 col-xl-4 wow fadeIn" data-wow-delay="0.1s">
+            <div class="program-item rounded">
+               <div class="program-img position-relative">
+                  <div class="overflow-hidden img-border-radius">
+                     <img src="<?= base_url('assets') ?>/img/program-1.jpg" class="img-fluid w-100" alt="Image">
+                  </div>
+                  <div class="px-4 py-2 bg-primary text-white program-rate">$60.99</div>
+               </div>
+               <div class="program-text bg-white px-4 pb-3">
+                  <div class="program-text-inner">
+                     <a href="#" class="h4">English For Today</a>
+                     <p class="mt-3 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus consectetur,</p>
+                  </div>
+               </div>
+               <div class="program-teacher d-flex align-items-center border-top border-primary bg-white px-4 py-3">
+                  <img src="<?= base_url('assets') ?>/img/program-teacher.jpg" class="img-fluid rounded-circle p-2 border border-primary bg-white" alt="Image" style="width: 70px; height: 70px;">
+                  <div class="ms-3">
+                     <h6 class="mb-0 text-primary">Mary Mordern</h6>
+                     <small>Arts Designer</small>
+                  </div>
+               </div>
+               <div class="d-flex justify-content-between px-4 py-2 bg-primary rounded-bottom">
+                  <small class="text-white"><i class="fas fa-wheelchair me-1"></i> 30 Sits</small>
+                  <small class="text-white"><i class="fas fa-book me-1"></i> 11 Lessons</small>
+                  <small class="text-white"><i class="fas fa-clock me-1"></i> 60 Hours</small>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-6 col-lg-6 col-xl-4 wow fadeIn" data-wow-delay="0.3s">
+            <div class="program-item rounded">
+               <div class="program-img position-relative">
+                  <div class="overflow-hidden img-border-radius">
+                     <img src="<?= base_url('assets') ?>/img/program-2.jpg" class="img-fluid w-100" alt="Image">
+                  </div>
+                  <div class="px-4 py-2 bg-primary text-white program-rate">$60.99</div>
+               </div>
+               <div class="program-text bg-white px-4 pb-3">
+                  <div class="program-text-inner">
+                     <a href="#" class="h4">Graphics Arts</a>
+                     <p class="mt-3 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus consectetur,</p>
+                  </div>
+               </div>
+               <div class="program-teacher d-flex align-items-center border-top border-primary bg-white px-4 py-3">
+                  <img src="<?= base_url('assets') ?>/img/program-teacher.jpg" class="img-fluid rounded-circle p-2 border border-primary bg-white" alt="" style="width: 70px; height: 70px;">
+                  <div class="ms-3">
+                     <h6 class="mb-0 text-primary">Mary Mordern</h6>
+                     <small>Arts Designer</small>
+                  </div>
+               </div>
+               <div class="d-flex justify-content-between px-4 py-2 bg-primary rounded-bottom">
+                  <small class="text-white"><i class="fas fa-wheelchair me-1"></i> 30 Sits</small>
+                  <small class="text-white"><i class="fas fa-book me-1"></i> 11 Lessons</small>
+                  <small class="text-white"><i class="fas fa-clock me-1"></i> 60 Hours</small>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-6 col-lg-6 col-xl-4 wow fadeIn" data-wow-delay="0.5s">
+            <div class="program-item rounded">
+               <div class="program-img position-relative">
+                  <div class="overflow-hidden img-border-radius">
+                     <img src="<?= base_url('assets') ?>/img/program-3.jpg" class="img-fluid w-100" alt="Image">
+                  </div>
+                  <div class="px-4 py-2 bg-primary text-white program-rate">$60.99</div>
+               </div>
+               <div class="program-text bg-white px-4 pb-3">
+                  <div class="program-text-inner">
+                     <a href="#" class="h4">General Science</a>
+                     <p class="mt-3 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus consectetur,</p>
+                  </div>
+               </div>
+               <div class="program-teacher d-flex align-items-center border-top border-primary bg-white px-4 py-3">
+                  <img src="<?= base_url('assets') ?>/img/program-teacher.jpg" class="img-fluid rounded-circle p-2 border border-primary bg-white" alt="" style="width: 70px; height: 70px;">
+                  <div class="ms-3">
+                     <h6 class="mb-0 text-primary">Mary Mordern</h6>
+                     <small>Arts Designer</small>
+                  </div>
+               </div>
+               <div class="d-flex justify-content-between px-4 py-2 bg-primary rounded-bottom">
+                  <small class="text-white"><i class="fas fa-wheelchair me-1"></i> 30 Sits</small>
+                  <small class="text-white"><i class="fas fa-book me-1"></i> 11 Lessons</small>
+                  <small class="text-white"><i class="fas fa-clock me-1"></i> 60 Hours</small>
+               </div>
+            </div>
+         </div>
+         <div class="d-inline-block text-center wow fadeIn" data-wow-delay="0.1s">
+            <a href="#" class="btn btn-primary px-5 py-3 text-white btn-border-radius">Vew All Programs</a>
+         </div>
+      </div>
+   </div>
+</div>
+<!-- Program End -->
+
+
+<!-- Events Start -->
+<div class="container-fluid events py-5 bg-light">
+   <div class="container py-5">
+      <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 700px;">
+         <h4 class="text-primary mb-4 border-bottom border-primary border-2 d-inline-block p-2 title-border-radius">Our Events</h4>
+         <h1 class="mb-5 display-3">Our Upcoming Events</h1>
+      </div>
+      <div class="row g-5 justify-content-center">
+         <div class="col-md-6 col-lg-6 col-xl-4 wow fadeIn" data-wow-delay="0.1s">
+            <div class="events-item bg-primary rounded">
+               <div class="events-inner position-relative">
+                  <div class="events-img overflow-hidden rounded-circle position-relative">
+                     <img src="<?= base_url('assets') ?>/img/event-1.jpg" class="img-fluid w-100 rounded-circle" alt="Image">
+                     <div class="event-overlay">
+                        <a href="<?= base_url('assets') ?>/img/event-1.jpg" data-lightbox="event-1"><i class="fas fa-search-plus text-white fa-2x"></i></a>
+                     </div>
+                  </div>
+                  <div class="px-4 py-2 bg-secondary text-white text-center events-rate">29 Nov</div>
+                  <div class="d-flex justify-content-between px-4 py-2 bg-secondary">
+                     <small class="text-white"><i class="fas fa-calendar me-1 text-primary"></i> 10:00am - 12:00pm</small>
+                     <small class="text-white"><i class="fas fa-map-marker-alt me-1 text-primary"></i> New York</small>
+                  </div>
+               </div>
+               <div class="events-text p-4 border border-primary bg-white border-top-0 rounded-bottom">
+                  <a href="#" class="h4">Music & drawing workshop</a>
+                  <p class="mb-0 mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus consectetur,</p>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-6 col-lg-6 col-xl-4 wow fadeIn" data-wow-delay="0.3s">
+            <div class="events-item bg-primary rounded">
+               <div class="events-inner position-relative">
+                  <div class="events-img overflow-hidden rounded-circle position-relative">
+                     <img src="<?= base_url('assets') ?>/img/event-2.jpg" class="img-fluid w-100 rounded-circle" alt="Image">
+                     <div class="event-overlay">
+                        <a href="<?= base_url('assets') ?>/img/event-3.jpg" data-lightbox="event-1"><i class="fas fa-search-plus text-white fa-2x"></i></a>
+                     </div>
+                  </div>
+                  <div class="px-4 py-2 bg-secondary text-white text-center events-rate">29 Nov</div>
+                  <div class="d-flex justify-content-between px-4 py-2 bg-secondary">
+                     <small class="text-white"><i class="fas fa-calendar me-1 text-primary"></i> 10:00am - 12:00pm</small>
+                     <small class="text-white"><i class="fas fa-map-marker-alt me-1 text-primary"></i> New York</small>
+                  </div>
+               </div>
+               <div class="events-text p-4 border border-primary bg-white border-top-0 rounded-bottom">
+                  <a href="#" class="h4">Why need study</a>
+                  <p class="mb-0 mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus consectetur,</p>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-6 col-lg-6 col-xl-4 wow fadeIn" data-wow-delay="0.5s">
+            <div class="events-item bg-primary rounded">
+               <div class="events-inner position-relative">
+                  <div class="events-img overflow-hidden rounded-circle position-relative">
+                     <img src="<?= base_url('assets') ?>/img/event-3.jpg" class="img-fluid w-100 rounded-circle" alt="Image">
+                     <div class="event-overlay">
+                        <a href="<?= base_url('assets') ?>/img/event-3.jpg" data-lightbox="event-1"><i class="fas fa-search-plus text-white fa-2x"></i></a>
+                     </div>
+                  </div>
+                  <div class="px-4 py-2 bg-secondary text-white text-center events-rate">29 Nov</div>
+                  <div class="d-flex justify-content-between px-4 py-2 bg-secondary">
+                     <small class="text-white"><i class="fas fa-calendar me-1 text-primary"></i> 10:00am - 12:00pm</small>
+                     <small class="text-white"><i class="fas fa-map-marker-alt me-1 text-primary"></i> New York</small>
+                  </div>
+               </div>
+               <div class="events-text p-4 border border-primary bg-white border-top-0 rounded-bottom">
+                  <a href="#" class="h4">Child health consciousness</a>
+                  <p class="mb-0 mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus consectetur,</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<!-- Events End-->
+
+
+<!-- Team Start-->
+<div class="container-fluid team py-5">
+   <div class="container py-5">
+      <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 600px;">
+         <h4 class="text-primary mb-4 border-bottom border-primary border-2 d-inline-block p-2 title-border-radius">Our Team</h4>
+         <h1 class="mb-5 display-3">Meet With Our Expert Teacher</h1>
+      </div>
+      <div class="row g-5 justify-content-center">
+         <div class="col-md-6 col-lg-4 col-xl-3 wow fadeIn" data-wow-delay="0.1s">
+            <div class="team-item border border-primary img-border-radius overflow-hidden">
+               <img src="<?= base_url('assets') ?>/img/team-1.jpg" class="img-fluid w-100" alt="">
+               <div class="team-icon d-flex align-items-center justify-content-center">
+                  <a class="share btn btn-primary btn-md-square text-white rounded-circle me-3" href=""><i class="fas fa-share-alt"></i></a>
+                  <a class="share-link btn btn-primary btn-md-square text-white rounded-circle me-3" href=""><i class="fab fa-facebook-f"></i></a>
+                  <a class="share-link btn btn-primary btn-md-square text-white rounded-circle me-3" href=""><i class="fab fa-twitter"></i></a>
+                  <a class="share-link btn btn-primary btn-md-square text-white rounded-circle" href=""><i class="fab fa-instagram"></i></a>
+               </div>
+               <div class="team-content text-center py-3">
+                  <h4 class="text-primary">Linda Carlson</h4>
+                  <p class="text-muted mb-2">English Teacher</p>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-6 col-lg-4 col-xl-3 wow fadeIn" data-wow-delay="0.3s">
+            <div class="team-item border border-primary img-border-radius overflow-hidden">
+               <img src="<?= base_url('assets') ?>/img/team-2.jpg" class="img-fluid w-100" alt="">
+               <div class="team-icon d-flex align-items-center justify-content-center">
+                  <a class="share btn btn-primary btn-md-square text-white rounded-circle me-3" href=""><i class="fas fa-share-alt"></i></a>
+                  <a class="share-link btn btn-primary btn-md-square text-white rounded-circle me-3" href=""><i class="fab fa-facebook-f"></i></a>
+                  <a class="share-link btn btn-primary btn-md-square text-white rounded-circle me-3" href=""><i class="fab fa-twitter"></i></a>
+                  <a class="share-link btn btn-primary btn-md-square text-white rounded-circle" href=""><i class="fab fa-instagram"></i></a>
+               </div>
+               <div class="team-content text-center py-3">
+                  <h4 class="text-primary">Linda Carlson</h4>
+                  <p class="text-muted mb-2">English Teacher</p>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-6 col-lg-4 col-xl-3 wow fadeIn" data-wow-delay="0.5s">
+            <div class="team-item border border-primary img-border-radius overflow-hidden">
+               <img src="<?= base_url('assets') ?>/img/team-3.jpg" class="img-fluid w-100" alt="">
+               <div class="team-icon d-flex align-items-center justify-content-center">
+                  <a class="share btn btn-primary btn-md-square text-white rounded-circle me-3" href=""><i class="fas fa-share-alt"></i></a>
+                  <a class="share-link btn btn-primary btn-md-square text-white rounded-circle me-3" href=""><i class="fab fa-facebook-f"></i></a>
+                  <a class="share-link btn btn-primary btn-md-square text-white rounded-circle me-3" href=""><i class="fab fa-twitter"></i></a>
+                  <a class="share-link btn btn-primary btn-md-square text-white rounded-circle" href=""><i class="fab fa-instagram"></i></a>
+               </div>
+               <div class="team-content text-center py-3">
+                  <h4 class="text-primary">Linda Carlson</h4>
+                  <p class="text-muted mb-2">English Teacher</p>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-6 col-lg-4 col-xl-3 wow fadeIn" data-wow-delay="0.7s">
+            <div class="team-item border border-primary img-border-radius overflow-hidden">
+               <img src="<?= base_url('assets') ?>/img/team-4.jpg" class="img-fluid w-100" alt="">
+               <div class="team-icon d-flex align-items-center justify-content-center">
+                  <a class="share btn btn-primary btn-md-square text-white rounded-circle me-3" href=""><i class="fas fa-share-alt"></i></a>
+                  <a class="share-link btn btn-primary btn-md-square text-white rounded-circle me-3" href=""><i class="fab fa-facebook-f"></i></a>
+                  <a class="share-link btn btn-primary btn-md-square text-white rounded-circle me-3" href=""><i class="fab fa-twitter"></i></a>
+                  <a class="share-link btn btn-primary btn-md-square text-white rounded-circle" href=""><i class="fab fa-instagram"></i></a>
+               </div>
+               <div class="team-content text-center py-3">
+                  <h4 class="text-primary">Linda Carlson</h4>
+                  <p class="text-muted mb-2">English Teacher</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<!-- Team End-->
