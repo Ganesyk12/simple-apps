@@ -4,8 +4,8 @@
          <div class="col-lg-7 col-md-12">
             <h1 class="mb-3 text-primary">We Care Your Baby</h1>
             <h1 class="mb-5 display-1 text-white">The Best Play Area For Your Kids</h1>
-            <a href="" class="btn btn-primary px-4 py-3 px-md-5  me-4 btn-border-radius">Get Started</a>
-            <a href="" class="btn btn-primary px-4 py-3 px-md-5 btn-border-radius">Learn More</a>
+            <a href="#about" class="btn btn-primary px-4 py-3 px-md-5  me-4 btn-border-radius">Baca Selengkapnya</a>
+            <a href="#facilities" class="btn btn-primary px-4 py-3 px-md-5 btn-border-radius">Fasilitas</a>
          </div>
       </div>
    </div>
@@ -14,7 +14,7 @@
 
 
 <!-- About Start -->
-<div class="container-fluid py-5 about bg-light">
+<div class="container-fluid py-5 about bg-light" id="about">
    <div class="container py-5">
       <div class="row g-5 align-items-center">
          <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
@@ -41,7 +41,7 @@
                   <h6><i class="fas fa-check-circle me-2 text-secondary"></i>Qualified Teacher</h6>
                </div>
             </div>
-            <a href="" class="btn btn-primary px-5 py-3 btn-border-radius">More Details</a>
+            <a href="<?= base_url('About') ?>" class="btn btn-primary px-5 py-3 btn-border-radius">More Details</a>
          </div>
       </div>
    </div>
@@ -68,7 +68,7 @@
 
 
 <!-- Service Start -->
-<div class="container-fluid service py-5">
+<div class="container-fluid service py-5" id="facilities">
    <div class="container py-5">
       <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 700px;">
          <h4 class="text-primary mb-4 border-bottom border-primary border-2 d-inline-block p-2 title-border-radius">What We Do</h4>

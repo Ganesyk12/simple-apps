@@ -19,8 +19,9 @@
                <div class="nav-item dropdown">
                   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Menu</a>
                   <div class="dropdown-menu m-0 bg-secondary rounded-0">
-                     <a href="blog.html" class="dropdown-item">Program</a>
-                     <a href="team.html" class="dropdown-item">Tata Tertib</a>
+                     <a href="<?= base_url('home/programs') ?>" class="dropdown-item">Program</a>
+                     <a href="<?= base_url('home/terms') ?>" class="dropdown-item">Tata Tertib</a>
+                     <a href="<?= base_url('home/contacts') ?>" class="dropdown-item">Kontak Kami</a>
                   </div>
                </div>
             </div>

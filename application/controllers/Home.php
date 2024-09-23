@@ -18,4 +18,80 @@ class Home extends CI_Controller
       $this->load->view('dashboard/V_dashboard');
       $this->load->view('base/footer');
    }
+
+   // alternative route : home/terms
+   public function terms()
+   {
+      $terms = new Terms();
+      $terms->index();
+   }
+
+   public function programs()
+   {
+      $prog = new Programs();
+      $prog->index();
+   }
+
+   public function contacts()
+   {
+      $contact = new Contact();
+      $contact->index();
+   }
+}
+
+class Terms extends CI_Controller
+{
+   public function __construct()
+   {
+      parent::__construct();
+      $this->load->helper('url');
+      $this->load->database('default');
+   }
+
+   public function index()
+   {
+      $data['title'] = 'Terms';
+      $this->load->view('base/header', $data);
+      $this->load->view('base/navbar', $data);
+      $this->load->view('terms/V_terms');
+      $this->load->view('base/footer');
+   }
+}
+
+class Programs extends CI_Controller
+{
+   public function __construct()
+   {
+      parent::__construct();
+      $this->load->helper('url');
+      $this->load->database('default');
+   }
+
+   public function index()
+   {
+      $data['title'] = 'Programs';
+      $this->load->view('base/header', $data);
+      $this->load->view('base/navbar', $data);
+      $this->load->view('program/V_program');
+      $this->load->view('base/footer');
+   }
+}
+
+class Contact extends CI_Controller
+{
+   public function __construct()
+   {
+      parent::__construct();
+      $this->load->helper('url');
+      $this->load->database('default');
+   }
+
+   public function index()
+   {
+      $data['title'] = 'Contact';
+      $this->load->view('base/header', $data);
+      $this->load->view('base/navbar', $data);
+      $this->load->view('contact/V_contact');
+      $this->load->view('base/footer');
+   }
 }

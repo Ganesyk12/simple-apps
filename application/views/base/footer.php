@@ -33,14 +33,13 @@
             <div class="footer-item">
                <h4 class="text-primary mb-4 border-bottom border-primary border-2 d-inline-block p-2 title-border-radius">LOCATION</h4>
                <div class="d-flex flex-column align-items-start">
-                  <a href="" class="text-body mb-4"><i class="fa fa-map-marker-alt text-primary me-2"></i> Sentrakota Jatibening Blok No.C/05, RT.001/RW.003, Jatibening Baru, Kec. Pd. Gede, Kota Bks, Jawa Barat 17412</a>
-                  <a href="" class="text-start rounded-0 text-body mb-4"><i class="fa fa-phone-alt text-primary me-2"></i> 0852-8278-3549</a>
-                  <a href="mailto:" class="text-start rounded-0 text-body mb-4"><i class="fas fa-envelope text-primary me-2"></i> arenabocil05@gmail.com</a>
+                  <a href="#" class="text-body mb-4"><i class="fa fa-map-marker-alt text-primary me-2"></i> Sentrakota Jatibening Blok No.C/05, RT.001/RW.003, Jatibening Baru, Kec. Pd. Gede, Kota Bks, Jawa Barat 17412</a>
+                  <a href="#" class="text-start rounded-0 text-body mb-4"><i class="fa fa-phone-alt text-primary me-2"></i> 0852-8278-3549</a>
+                  <a href="#" class="text-start rounded-0 text-body mb-4"><i class="fas fa-envelope text-primary me-2"></i> arenabocil05@gmail.com</a>
                   <div class="footer-icon d-flex">
-                     <a class="btn btn-primary btn-sm-square me-3 rounded-circle text-white" href=""><i class="fab fa-facebook-f"></i></a>
-                     <a class="btn btn-primary btn-sm-square me-3 rounded-circle text-white" href=""><i class="fab fa-twitter"></i></a>
-                     <a href="#" class="btn btn-primary btn-sm-square me-3 rounded-circle text-white"><i class="fab fa-instagram"></i></a>
-                     <a href="#" class="btn btn-primary btn-sm-square me-3 rounded-circle text-white"><i class="fab fa-linkedin-in"></i></a>
+                     <a class="btn btn-primary btn-sm-square me-3 rounded-circle text-white" href=""><i class="fab fa-instagram"></i></a>
+                     <a class="btn btn-primary btn-sm-square me-3 rounded-circle text-white" href=""><i class="fab fa-tiktok"></i></a>
+                     <a href="#" class="btn btn-primary btn-sm-square me-3 rounded-circle text-white"><i class="fab fa-youtube"></i></a>
                      <a href="#" class="btn btn-primary btn-sm-square rounded-circle text-white"><i class="fas fa-user"></i></a>
                   </div>
                </div>
@@ -48,7 +47,7 @@
          </div>
          <div class="col-md-6 col-lg-4 col-xl-3">
             <div class="footer-item">
-               <h4 class="text-primary mb-4 border-bottom border-primary border-2 d-inline-block p-2 title-border-radius">OUR GALLARY</h4>
+               <h4 class="text-primary mb-4 border-bottom border-primary border-2 d-inline-block p-2 title-border-radius">OUR GALLERY</h4>
                <div class="row g-3">
                   <div class="col-4">
                      <div class="footer-galary-img rounded-circle border border-primary">
