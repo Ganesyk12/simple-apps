@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-$config['base_url'] = 'https://localhost/new-apps';
+$config['base_url'] = 'http://localhost/playground/simple-apps';
 // $config['base_url'] = 'https://' . $_SERVER['HTTP_HOST'] . str_replace(basename($_SERVER['SCRIPT_NAME']), "", $_SERVER['SCRIPT_NAME']);
 
 $config['index_page'] = '';
