@@ -12,10 +12,10 @@
          </button>
          <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav mx-auto">
-               <a href="index.html" class="nav-item nav-link active">Beranda</a>
-               <a href="about.html" class="nav-item nav-link">Tentang Kami</a>
-               <a href="service.html" class="nav-item nav-link">Layanan</a>
-               <a href="event.html" class="nav-item nav-link">Berita</a>
+               <a href="<?= base_url('Home') ?>" class="nav-item nav-link <?= ($this->uri->segment(1) == 'Home' || $this->uri->segment(1) == '') ? 'active' : '' ?>">Beranda</a>
+               <a href="<?= base_url('About') ?>" class="nav-item nav-link <?= ($this->uri->segment(1) == 'About' || $this->uri->segment(1) == '') ? 'active' : '' ?>">Tentang Kami</a>
+               <a href="<?= base_url('Service') ?>" class="nav-item nav-link <?= ($this->uri->segment(1) == 'Service' || $this->uri->segment(1) == '') ? 'active' : '' ?>">Layanan</a>
+               <a href="<?= base_url('News') ?>" class="nav-item nav-link <?= ($this->uri->segment(1) == 'News' || $this->uri->segment(1) == '') ? 'active' : '' ?>">Berita</a>
                <div class="nav-item dropdown">
                   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Menu</a>
                   <div class="dropdown-menu m-0 bg-secondary rounded-0">
@@ -35,7 +35,7 @@
                </div>
                <div class="d-flex flex-column pe-3">
                   <span class="text-primary">Layanan Konsumen</span>
-                  <a href="#"><span class="text-secondary">Free: + 0123 456 7890</span></a>
+                  <a href="#"><span class="text-secondary">Free: 0852-8278-3549</span></a>
                </div>
             </div>
          </div>
