@@ -40,7 +40,7 @@
                      <a class="btn btn-primary btn-sm-square me-3 rounded-circle text-white" href=""><i class="fab fa-instagram"></i></a>
                      <a class="btn btn-primary btn-sm-square me-3 rounded-circle text-white" href=""><i class="fab fa-tiktok"></i></a>
                      <a href="#" class="btn btn-primary btn-sm-square me-3 rounded-circle text-white"><i class="fab fa-youtube"></i></a>
-                     <a href="#" class="btn btn-primary btn-sm-square rounded-circle text-white"><i class="fas fa-user"></i></a>
+                     <a href="<?= base_url('Auth') ?>" class="btn btn-primary btn-sm-square rounded-circle text-white"><i class="fas fa-user"></i></a>
                   </div>
                </div>
             </div>

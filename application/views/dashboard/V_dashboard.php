@@ -68,10 +68,10 @@
 
 
 <!-- Service Start -->
-<div class="container-fluid service py-5" id="facilities">
-   <div class="container py-5">
+<div class="container-fluid service py-3" id="facilities">
+   <div class="container py-1">
       <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 700px;">
-         <h4 class="text-primary mb-4 border-bottom border-primary border-2 d-inline-block p-2 title-border-radius">What We Do</h4>
+         <h4 class="text-primary mb-3 border-bottom border-primary border-2 d-inline-block p-2 title-border-radius">What We Do</h4>
          <h1 class="mb-5 display-3">Thanks To Get Started With Our School</h1>
       </div>
       <div class="row g-5">
