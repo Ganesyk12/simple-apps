@@ -13,9 +13,13 @@ class Auth extends CI_Controller
    public function index()
    {
       $data['title'] = 'Login Pages';
-      $this->load->view('admin/header', $data);
-      // $this->load->view('admin/navbar', $data);
+      $this->load->view('login/layout/header', $data);
       $this->load->view('login/V_login');
-      $this->load->view('admin/footer');
+      $this->load->view('login/layout/footer');
+   }
+
+   public function login()
+   {
+      redirect('admin/dashboard');
    }
 }

@@ -2,12 +2,12 @@
    <!-- /.login-logo -->
    <div class="card card-outline card-primary">
       <div class="card-header text-center">
-         <a href="#" class="h1"><b>Admin</b>Login</a>
+         <a href="<?= base_url('Home') ?>" class="h1"><b>Admin</b>Login</a>
       </div>
       <div class="card-body">
          <p class="login-box-msg">Sign in to start your session</p>
 
-         <form action="../../index3.html" method="post">
+         <form method="post" action="<?= base_url('auth/login'); ?>">
             <div class="input-group mb-3">
                <input type="email" class="form-control" placeholder="Email">
                <div class="input-group-append">
@@ -26,21 +26,20 @@
             </div>
             <div class="row">
                <div class="col-8">
-                  <!-- <div class="icheck-primary">
-                     <input type="checkbox" id="remember">
-                     <label for="remember">
-                        Remember Me
-                     </label>
-                  </div> -->
                </div>
                <!-- /.col -->
                <div class="col-4">
-                  <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                  <!-- <button type="submit" class="btn btn-primary btn-block">Sign In</button> -->
                </div>
                <!-- /.col -->
             </div>
+            <div class="row">
+               <div class="col-8"></div>
+               <div class="col-4">
+                  <button type="submit" class="btn btn-primary btn-block" onclick="">Sign In</button>
+               </div>
+            </div>
          </form>
-         <!-- /.social-auth-links -->
 
          <p class="mb-1">
             <a href="forgot-password.html">I forgot my password</a>
@@ -49,7 +48,5 @@
             <a href="register.html" class="text-center">Register a new membership</a>
          </p>
       </div>
-      <!-- /.card-body -->
    </div>
-   <!-- /.card -->
 </div>
