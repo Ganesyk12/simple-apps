@@ -28,7 +28,7 @@ $autoload['libraries'] = array('database');
 
 $autoload['drivers'] = array();
 
-$autoload['helper'] = array('url', 'file', 'form', 'security');
+$autoload['helper'] = array('url', 'date', 'file', 'form', 'security');
 
 $autoload['config'] = array();
 

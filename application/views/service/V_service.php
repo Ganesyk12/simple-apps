@@ -1,64 +1,119 @@
-<!-- Service Start -->
 <div class="container-fluid service py-1">
    <div class="container py-3">
       <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 700px;">
-         <h4 class="text-primary mb-4 border-bottom border-primary border-2 d-inline-block p-2 title-border-radius">What We Do</h4>
-         <h1 class="mb-5 display-3">Thanks To Get Started With Our School</h1>
+         <h6 class="mb-4 display-3">Tiket Kunjungan</h6>
       </div>
-      <div class="row g-5">
-         <div class="col-md-6 col-lg-6 col-xl-3 wow fadeIn" data-wow-delay="0.1s">
-            <div class="text-center border-primary border bg-white service-item">
-               <div class="service-content d-flex align-items-center justify-content-center p-4">
-                  <div class="service-content-inner">
-                     <div class="p-4"><i class="fas fa-gamepad fa-6x text-primary"></i></div>
-                     <a href="#" class="h4">Study & Game</a>
-                     <p class="my-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, culpa qui officiis animi Lorem ipsum dolor sit amet,
-                        consectetur adipisicing elit.</p>
-                     <a href="#" class="btn btn-primary text-white px-4 py-2 my-2 btn-border-radius">Read More</a>
+      <div class="row">
+         <!-- Section Form Pemesanan -->
+         <section class="col-lg-4 connectedSortable">
+            <div class="card">
+               <form id="bookingForm" type="form">
+                  <div class="card-body">
+                     <h4 class="card-title text-center mb-3">FORM PEMESANAN TIKET</h4>
+                     <!-- step1 -->
+                     <div id="step1">
+                        <div class="row mb-3">
+                           <div class="form-group">
+                              <label for="name" class="form-label">Nama Lengkap</label>
+                              <input type="text" class="form-control" id="name" name="name">
+                           </div>
+                        </div>
+                        <div class="row mb-3">
+                           <div class="form-group">
+                              <label for="no_telp">Nomor Telepon</label>
+                              <div class="input-group">
+                                 <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                                 <input type="text" class="form-control" id="no_telp" name="no_telp">
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row mb-3">
+                           <div class="form-group">
+                              <label for="email" class="form-label">Email</label>
+                              <input type="email" class="form-control" id="email" name="email">
+                           </div>
+                        </div>
+                        <div class="row mb-3">
+                           <div class="form-group">
+                              <label for="reservation_date" class="form-label">Tanggal Booking</label>
+                              <input type="date" class="form-control" id="reservation_date" name="reservation_date">
+                           </div>
+                        </div>
+                        <div class="row mb-3">
+                           <div class="form-group">
+                              <label for="reservation_time" class="form-label">Waktu Booking</label>
+                              <input type="time" min="07:00" max="21:00" class="form-control" id="reservation_time" name="reservation_time">
+                           </div>
+                        </div>
+                     </div>
+                     <!-- step2 -->
+                     <div id="step2" style="display: none;">
+                        <div class="row mb-3">
+                           <div class="form-group">
+                              <label for="ticket_quantity" class="form-label">Jumlah Tiket</label>
+                              <div class="d-flex align-items-center">
+                                 <button type="button" class="btn btn-outline-secondary me-2" id="decreaseBtn">-</button>
+                                 <input type="number" min="1" value="1" class="form-control text-center" style="width: max-width;" id="ticket_quantity" name="ticket_quantity" readonly>
+                                 <button type="button" class="btn btn-outline-secondary ms-2" id="increaseBtn">+</button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </form>
+               <div class="card-footer text-end">
+                  <button type="button" class="btn btn-secondary py-2 me-2 text-white" id="backbtn" style="display: none;">Kembali</button>
+                  <button type="button" class="btn btn-primary py-2 text-white" id="primarybtn">Selanjutnya</button>
+               </div>
+            </div>
+         </section>
+         <!-- Section Daftar Harga Tiket -->
+         <section class="col-lg-8 connectedSortable">
+            <div class="card mb-3">
+               <div class="card-body">
+                  <h4 class="card-title text-center mb-5">Daftar Harga Tiket</h4>
+                  <div class="container">
+                     <table class="table display table-bordered text-center">
+                        <thead class="table-primary">
+                           <tr>
+                              <th>Hari</th>
+                              <th>Harga per jam</th>
+                              <th>Harga per hari</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>Weekdays</td>
+                              <td>30k /jam</td>
+                              <td>50k /hari</td>
+                           </tr>
+                           <tr>
+                              <td>Weekend</td>
+                              <td>40k /jam</td>
+                              <td>60k /hari</td>
+                           </tr>
+                           <tr>
+                              <td>Membership</td>
+                              <td colspan="2">300k /bulan</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <span><b>Ketentuan :</b>
+                        Anak tanpa pendamping dikenakan biaya tambahan seharga 1 tiket yang dibeli
+                     </span>
                   </div>
                </div>
             </div>
-         </div>
-         <div class="col-md-6 col-lg-6 col-xl-3 wow fadeIn" data-wow-delay="0.3s">
-            <div class="text-center border-primary border bg-white service-item">
-               <div class="service-content d-flex align-items-center justify-content-center p-4">
-                  <div class="service-content-inner">
-                     <div class="p-4"><i class="fas fa-sort-alpha-down fa-6x text-primary"></i></div>
-                     <a href="#" class="h4">A to Z Programs</a>
-                     <p class="my-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, culpa qui officiis animi Lorem ipsum dolor sit amet,
-                        consectetur adipisicing elit.</p>
-                     <a href="#" class="btn btn-primary text-white px-4 py-2 my-2 btn-border-radius">Read More</a>
+            <div class="card">
+               <div class="card-body">
+                  <h4 class="card-title text-center mb-3">Jam Operasional</h4>
+                  <div class="container text-center">
+                     <button type="button" class="btn btn-lg btn-block btn-primary text-white rounded-pill mb-3">Senin - Jum'at : 09.00 - 21.00</button>
+                     <button type="button" class="btn btn-lg btn-block btn-primary text-white rounded-pill">Sabtu - Minggu : 07.00 - 21.00</button>
                   </div>
                </div>
             </div>
-         </div>
-         <div class="col-md-6 col-lg-6 col-xl-3 wow fadeIn" data-wow-delay="0.5s">
-            <div class="text-center border-primary border bg-white service-item">
-               <div class="service-content d-flex align-items-center justify-content-center p-4">
-                  <div class="service-content-inner">
-                     <div class="p-4"><i class="fas fa-users fa-6x text-primary"></i></div>
-                     <a href="#" class="h4">Expert Teacher</a>
-                     <p class="my-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, culpa qui officiis animi Lorem ipsum dolor sit amet,
-                        consectetur adipisicing elit.</p>
-                     <a href="#" class="btn btn-primary text-white px-4 py-2 my-2 btn-border-radius">Read More</a>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="col-md-6 col-lg-6 col-xl-3 wow fadeIn" data-wow-delay="0.7s">
-            <div class="text-center border-primary border bg-white service-item">
-               <div class="service-content d-flex align-items-center justify-content-center p-4">
-                  <div class="service-content-inner">
-                     <div class="p-4"><i class="fas fa-user-nurse fa-6x text-primary"></i></div>
-                     <a href="#" class="h4">Mental Health</a>
-                     <p class="my-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, culpa qui officiis animi Lorem ipsum dolor sit amet,
-                        consectetur adipisicing elit.</p>
-                     <a href="#" class="btn btn-primary text-white px-4 py-2 my-2 btn-border-radius">Read More</a>
-                  </div>
-               </div>
-            </div>
-         </div>
+         </section>
       </div>
    </div>
 </div>
-<!-- Service End -->

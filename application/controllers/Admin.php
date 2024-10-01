@@ -20,41 +20,22 @@ class Admin extends CI_Controller
       $this->load->view('base/admin/footer');
    }
 
-   public function event()
+   public function transaction()
    {
-      $event = new Events();
-      $event->index();
-   }
-
-   public function ticket()
-   {
-      $ticket = new Tickets();
-      $ticket->index();
+      $trx = new Transaction();
+      $trx->index();
    }
 }
 
-class Events extends CI_Controller
+class Transaction extends CI_Controller
 {
    public function index()
    {
-      $data['title'] = 'Event';
+      $data['title'] = 'Menu Bills';
       $this->load->view('base/admin/header', $data);
       $this->load->view('base/admin/navbar', $data);
       $this->load->view('base/admin/sidebar', $data);
-      $this->load->view('admin/V_event', $data);
-      $this->load->view('base/admin/footer');
-   }
-}
-
-class Tickets extends CI_Controller
-{
-   public function index()
-   {
-      $data['title'] = 'Ticket & Promo';
-      $this->load->view('base/admin/header', $data);
-      $this->load->view('base/admin/navbar', $data);
-      $this->load->view('base/admin/sidebar', $data);
-      $this->load->view('admin/V_ticket', $data);
+      $this->load->view('admin/V_bills', $data);
       $this->load->view('base/admin/footer');
    }
 }
