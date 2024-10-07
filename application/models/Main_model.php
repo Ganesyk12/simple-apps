@@ -75,7 +75,6 @@ class Main_model extends CI_Model
             'recordsFiltered' => $sql_filter_count,
             'data' => $data
         );
-
         return json_encode($callback);
     }
 

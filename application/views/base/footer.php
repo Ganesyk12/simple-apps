@@ -57,14 +57,6 @@
                   <span>Kontak Kami</span>
                </a>
             </div>
-            <div class="footer-item mb-3">
-               <a href="<?= base_url('home/programs') ?>" class="d-flex align-items-center text-decoration-none">
-                  <span class="btn btn-primary btn-md-square me-3 rounded-circle text-white">
-                     <i class="fas fa-th-list"></i>
-                  </span>
-                  <span>Program</span>
-               </a>
-            </div>
          </div>
          <div class="col-md-6 col-lg-4 col-xl-3">
             <div class="footer-item">

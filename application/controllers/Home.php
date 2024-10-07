@@ -12,10 +12,10 @@ class Home extends CI_Controller
 
    public function index()
    {
-      $data['title'] = 'Dashboard';
+      $data['title'] = 'Home';
       $this->load->view('base/header', $data);
       $this->load->view('base/navbar', $data);
-      $this->load->view('dashboard/V_dashboard');
+      $this->load->view('public/home/index');
       $this->load->view('base/footer');
    }
    // alternative route : home/terms
@@ -23,12 +23,6 @@ class Home extends CI_Controller
    {
       $terms = new Terms();
       $terms->index();
-   }
-   // home/programs
-   public function programs()
-   {
-      $prog = new Programs();
-      $prog->index();
    }
    // home/contacts
    public function contacts()
@@ -64,26 +58,7 @@ class Terms extends CI_Controller
       $data['title'] = 'Terms';
       $this->load->view('base/header', $data);
       $this->load->view('base/navbar', $data);
-      $this->load->view('terms/V_terms');
-      $this->load->view('base/footer');
-   }
-}
-
-class Programs extends CI_Controller
-{
-   public function __construct()
-   {
-      parent::__construct();
-      $this->load->helper('url');
-      $this->load->database('default');
-   }
-
-   public function index()
-   {
-      $data['title'] = 'Programs';
-      $this->load->view('base/header', $data);
-      $this->load->view('base/navbar', $data);
-      $this->load->view('program/V_program');
+      $this->load->view('public/terms/V_terms');
       $this->load->view('base/footer');
    }
 }
@@ -102,7 +77,7 @@ class Contact extends CI_Controller
       $data['title'] = 'Contact';
       $this->load->view('base/header', $data);
       $this->load->view('base/navbar', $data);
-      $this->load->view('contact/V_contact');
+      $this->load->view('public/contact/V_contact');
       $this->load->view('base/footer');
    }
 }
@@ -121,7 +96,7 @@ class Blogs extends CI_Controller
       $data['title'] = 'About Us';
       $this->load->view('base/header', $data);
       $this->load->view('base/navbar', $data);
-      $this->load->view('about/V_about');
+      $this->load->view('public/about/V_about');
       $this->load->view('base/footer');
    }
 }
@@ -132,24 +107,17 @@ class Event extends CI_Controller
    {
       parent::__construct();
       $this->load->helper('url');
-      $this->load->database('default');
+      $this->load->model('Events_model', 'eventModel');
    }
 
    public function index()
    {
       $data['title'] = 'Events';
-      $data['event'] = $this->get_event();
+      $data['event'] = $this->eventModel->get_event();
       $this->load->view('base/header', $data);
       $this->load->view('base/navbar', $data);
-      $this->load->view('news/V_news', $data);
-      $this->load->view('news/news-js', $data);
+      $this->load->view('public/news/V_news', $data);
+      $this->load->view('public/news/news-js', $data);
       $this->load->view('base/footer');
-   }
-
-   function get_event()
-   {
-      $this->db->order_by('date_created', 'DESC');
-      $data = $this->db->get('event')->result();
-      return $data;
    }
 }

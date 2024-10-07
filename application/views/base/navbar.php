@@ -12,10 +12,10 @@
          </button>
          <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav mx-auto">
-               <a href="<?= base_url('Home') ?>" class="nav-item nav-link <?= ($this->uri->segment(1) == 'Home' && $this->uri->segment(2) == '') ? 'active' : '' ?>">Dashboard</a>
+               <a href="<?= base_url('Home') ?>" class="nav-item nav-link <?= ($this->uri->segment(1) == 'Home' && $this->uri->segment(2) == '') ? 'active' : '' ?>">Fasilitas</a>
                <a href="<?= base_url('Service') ?>" class="nav-item nav-link <?= ($this->uri->segment(1) == 'Service') ? 'active' : '' ?>">Ticket & Promo</a>
                <a href="<?= base_url('Home/events') ?>" class="nav-item nav-link <?= ($this->uri->segment(1) == 'Home' && $this->uri->segment(2) == 'events') ? 'active' : '' ?>">Event</a>
-               <a href="<?= base_url('Home/blogs') ?>" class="nav-item nav-link <?= ($this->uri->segment(1) == 'Home' && $this->uri->segment(2) == 'blogs') ? 'active' : '' ?>">Blog / Tips Parenting</a>
+               <a href="<?= base_url('Home/blogs') ?>" class="nav-item nav-link <?= ($this->uri->segment(1) == 'Home' && $this->uri->segment(2) == 'blogs') ? 'active' : '' ?>">Parenting Tips</a>
             </div>
          </div>
 

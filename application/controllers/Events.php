@@ -34,7 +34,6 @@ class Events extends CI_Controller
 
    public function add_event()
    {
-      // Generate SKU untuk event
       $mdate = "EVT" . date('md');
       $key = 'sku';
       $max_sku = $this->Main_model->Max_data($mdate, $key, 'event')->row();

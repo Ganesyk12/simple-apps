@@ -35,8 +35,8 @@
                   <ul class="mb-0 mt-3">
                      <li>Mainan Tematik (Polisi, Dokter, Cafe, Supermarket dll)</li>
                      <li>Mobil-mobilan</li>
+                     <li>Kincir Putar</li>
                      <li>Perpustakaan</li>
-                     <li>Mushalla</li>
                   </ul>
                </div>
             </div>
@@ -99,7 +99,7 @@
    </div>
    <div class="container py-3">
       <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 700px;">
-         <h1 class="mb-3 display-6">Lainnya</h1>
+         <h1 class="mb-3 display-6">Fasilitas Lainnya</h1>
       </div>
       <div class="container py-1">
          <ul class="list-unstyled d-flex justify-content-center">
@@ -129,6 +129,15 @@
                   <i class="fas fa-clock text-white fa-3x"></i>
                </span>
                <h5>Waiting Room</h5>
+            </li>
+            <li class="text-center me-5">
+               <span class="btn btn-secondary rounded-circle d-flex align-items-center justify-content-center mb-3"
+                  style="width: 100px; height: 100px; transition: transform 0.3s;"
+                  onmouseover="this.style.transform='scale(1.2)';"
+                  onmouseout="this.style.transform='scale(1)';">
+                  <i class="fas fa-mosque text-white fa-3x"></i>
+               </span>
+               <h5>Mushalla</h5>
             </li>
             <li class="text-center me-5">
                <span class="btn btn-success rounded-circle d-flex align-items-center justify-content-center mb-3"
@@ -243,7 +252,7 @@
                   </div>
                </div>
             </div>
-            <h4 class="py-3 text-center">MAINAN TEMATIK</h4>
+            <h4 class="py-3 text-center">MAINAN INTERAKTIF</h4>
          </div>
          <div class="col-md-6 col-lg-6 col-xl-4 wow fadeIn" data-wow-delay="0.1s">
             <div class="program-item rounded">
@@ -254,7 +263,7 @@
                   </div>
                </div>
             </div>
-            <h4 class="py-3 text-center">HOSPITAL</h4>
+            <h4 class="py-3 text-center">MAINAN TEMATIK</h4>
          </div>
       </div>
 
