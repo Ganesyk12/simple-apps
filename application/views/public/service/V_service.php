@@ -14,6 +14,16 @@
                      <div id="step1">
                         <div class="row mb-3">
                            <div class="form-group">
+                              <label for="ticketType" class="form-label">Jenis Tiket</label>
+                              <select class="form-control select2" id="ticketType" name="ticketType">
+                                 <option value="">-- Pilih --</option>
+                                 <option value="HT" data-price="30000">Harga per jam</option>
+                                 <option value="DT" data-price="50000">Harga per hari</option>
+                              </select>
+                           </div>
+                        </div>
+                        <div class="row mb-3">
+                           <div class="form-group">
                               <label for="name" class="form-label">Nama Lengkap</label>
                               <input type="text" class="form-control" id="name" name="name">
                            </div>
@@ -33,6 +43,9 @@
                               <input type="email" class="form-control" id="email" name="email">
                            </div>
                         </div>
+                     </div>
+                     <!-- step2 -->
+                     <div id="step2" style="display: none;">
                         <div class="row mb-3">
                            <div class="form-group">
                               <label for="reservation_date" class="form-label">Tanggal Booking</label>
@@ -45,9 +58,6 @@
                               <input type="time" min="07:00" max="21:00" class="form-control" id="reservation_time" name="reservation_time">
                            </div>
                         </div>
-                     </div>
-                     <!-- step2 -->
-                     <div id="step2" style="display: none;">
                         <div class="row mb-3">
                            <div class="form-group">
                               <label for="ticket_quantity" class="form-label">Jumlah Tiket</label>
@@ -56,6 +66,12 @@
                                  <input type="number" min="1" value="1" class="form-control text-center" style="width: max-width;" id="ticket_quantity" name="ticket_quantity" readonly>
                                  <button type="button" class="btn btn-outline-secondary ms-2" id="increaseBtn">+</button>
                               </div>
+                           </div>
+                        </div>
+                        <div class="row mb-3">
+                           <div class="form-group">
+                              <label for="count" class="form-label">Total Harga</label>
+                              <input type="text" class="form-control" id="count" name="total" disabled>
                            </div>
                         </div>
                      </div>

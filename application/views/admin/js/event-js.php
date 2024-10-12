@@ -35,7 +35,6 @@
          "columns": [{
                "data": "event_start",
                render: function(data, type, row) {
-                  // Fungsi untuk mengubah format tanggal dari Y-m-d ke d-m-Y
                   function formatDate(dateString) {
                      const date = new Date(dateString);
                      const day = String(date.getDate()).padStart(2, '0'); // Mendapatkan hari
