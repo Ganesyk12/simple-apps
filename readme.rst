@@ -4,8 +4,8 @@ Server Requirements
 *******************
 
 PHP version 5.6 or newer is recommended.
-> PHP 7.2.34
-> MySQL
+
+   PHP 7.2.34
 
 It should work on 5.3.7 as well, but we strongly advise you NOT to run
 such old versions of PHP, because of potential security and performance
@@ -38,10 +38,3 @@ Resources
 
 Report security issues to our `Security Panel <mailto:security@codeigniter.com>`_
 or via our `page on HackerOne <https://hackerone.com/codeigniter>`_, thank you.
-
-***************
-Acknowledgement
-***************
-
-The CodeIgniter team would like to thank EllisLab, all the
-contributors to the CodeIgniter project and you, the CodeIgniter user.

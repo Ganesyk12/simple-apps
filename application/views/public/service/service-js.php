@@ -17,13 +17,21 @@
             return pastedValue;
          }
       });
-   });
 
+      $('#termsCheck').on('change', function() {
+         // Enable the button if the checkbox is checked, otherwise disable it
+         $('#submitBtn').prop('disabled', !this.checked);
+      });
+   });
    // Event handler untuk tombol "Submit || Back"
    $('#primarybtn').on('click', () => {
       if ($('#step2').is(':visible')) {
-         // step2 active condition, run simpanAlert()
-         simpanAlert();
+         if ($('#termsCheck').is(':checked')) {
+            simpanAlert(); // Call the function to save data
+         } else {
+            alert('Silakan setujui syarat dan ketentuan untuk melanjutkan.');
+            $('#submitBtn').prop('disabled', true);
+         }
       } else {
          // if not, show step2 and change button
          $('#step1').hide();
@@ -58,20 +66,32 @@
    const ticketTypeSelect = $('#ticketType');
    const ticketQuantityInput = $('#ticket_quantity');
    const totalCountInput = $('#count');
+   const firstTotal = $('#total');
    const decreaseBtn = $('#decreaseBtn');
    const increaseBtn = $('#increaseBtn');
+   const voucherInput = $('#voucher');
+   const voucherError = $('#voucherError');
    const reservationDateInput = $('#reservation_date');
    const today = new Date().toISOString().split('T')[0]; // today format date
    reservationDateInput.attr('min', today);
 
+
+   let previousTotalPrice; // Declare variable to store the previous total price
+
+   const validVoucherCode = {
+      "FUNTOBER-ABC": 50,
+      "FUNTOBER-XYZ": 30,
+   }; // Kode voucher yang valid
+
+   function calculateTotal() { // 1-- to calculate total price
+      const totalPrice = ticketPrice * quantity;
+      totalCountInput.val(totalPrice.toLocaleString());
+      firstTotal.val(totalPrice.toLocaleString());
+      previousTotalPrice = totalPrice; // Update previous total price
+      return totalPrice; // Kembalikan total price untuk penggunaan selanjutnya
+   }
    // Function to calculate and update total price
    function manageTicketBooking() {
-
-      function calculateTotal() { // 1-- to calculate total price
-         const totalPrice = ticketPrice * quantity;
-         totalCountInput.val(`Rp ${totalPrice.toLocaleString()}`);
-      }
-
       function isWeekend(date) {
          const day = date.getDay(); // 2-- categories day(0 = Sunday, 6 = Saturday)
          return (day === 0 || day === 6);
@@ -122,6 +142,47 @@
    }
    manageTicketBooking(); // 8 -- release function
 
+   // Validasi voucher
+   voucherInput.on('change', function() {
+      const voucherCode = $(this).val().trim();
+      voucherError.hide();
+      const totalPrice = parseFloat(totalCountInput.val().replace(/[^0-9.-]+/g, ""));
+
+      if (voucherCode === '') {
+         calculateTotal();
+         voucherError.hide();
+         return;
+      }
+      $.ajax({
+         url: "<?= base_url('Service/validate_voucher') ?>",
+         method: 'POST',
+         data: {
+            voucherCode: voucherCode
+         },
+         dataType: 'json',
+         success: function(response) {
+            if (response.valid) {
+               const discountPercentage = response.discount;
+               const discount = totalPrice * (discountPercentage / 100);
+               const discountedPrice = totalPrice - discount;
+               previousTotalPrice = discountedPrice;
+
+               if (discountPercentage !== 0) {
+                  voucherError.text(`Potongan ${discountPercentage}% diterapkan!`).show();
+                  totalCountInput.val(discountedPrice.toLocaleString());
+               }
+            } else {
+               voucherError.text(response.message).show();
+               calculateTotal();
+            }
+         },
+         error: function() {
+            voucherError.text('Kode voucher salah.').show();
+            calculateTotal();
+         }
+      });
+   });
+
    function formatTanggal(tanggal) {
       const options = {
          day: '2-digit',
@@ -131,6 +192,7 @@
       return new Date(tanggal).toLocaleDateString('id-ID', options);
    }
 
+   let discountPercentage = 0;
    const simpanAlert = () => {
       // Mengambil nilai dari input
       const ticketType = $('#ticketType').val();
@@ -140,10 +202,11 @@
       const reservationDate = formatTanggal($('#reservation_date').val());
       const reservationTime = $('#reservation_time').val();
       const ticketQuantity = $('#ticket_quantity').val();
+      const firstPrice = $('#total').val();
       const totalPrice = $('#count').val();
-
+      const voucher = $('#voucher').val();
       // Menampilkan alert dengan nilai yang diambil
-      alert(`Data Pemesanan:\n Jenis Tiket: ${ticketType}\n Nama: ${name}\n Nomor Telepon: ${noTelp}\n Email: ${email}\n Tanggal Booking: ${reservationDate}\n Waktu Booking: ${reservationTime}\n Jumlah Tiket: ${ticketQuantity}\n Total Harga: ${totalPrice}`);
+      alert(`Data Pemesanan:\n Jenis Tiket: ${ticketType}\n Nama: ${name}\n Nomor Telepon: ${noTelp}\n Email: ${email}\n Tanggal Booking: ${reservationDate}\n Waktu Booking: ${reservationTime}\n Jumlah Tiket: ${ticketQuantity}\n Voucher: ${voucher}\n Total Harga: ${firstPrice}\n Total Diskon: ${totalPrice}`);
    };
 
    const Simpan_data = () => {

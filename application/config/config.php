@@ -8,26 +8,12 @@ $config['index_page'] = '';
 
 $config['uri_protocol']   = 'REQUEST_URI';
 
-/*
-|--------------------------------------------------------------------------
-| URL suffix
-|--------------------------------------------------------------------------
-*/
 $config['url_suffix'] = '';
 
 $config['language']   = 'english';
 
 $config['charset'] = 'UTF-8';
 
-/*
-|--------------------------------------------------------------------------
-| Enable/Disable System Hooks
-|--------------------------------------------------------------------------
-|
-| If you would like to use the 'hooks' feature you must enable it by
-| setting this variable to TRUE (boolean).  See the user guide for details.
-|
-*/
 $config['enable_hooks'] = FALSE;
 
 /*
@@ -138,7 +124,7 @@ $config['allow_get_array'] = TRUE;
 | your log files will fill up very fast.
 |
 */
-$config['log_threshold'] = 0;
+$config['log_threshold'] = 1;
 $config['log_path'] = '';
 $config['log_file_extension'] = '';
 

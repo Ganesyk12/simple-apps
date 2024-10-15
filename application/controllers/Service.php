@@ -56,4 +56,45 @@ class Service extends CI_Controller
       $data['status'] = 'Success';
       $this->output->set_content_type('application/json')->set_output(json_encode($data));
    }
+
+   // Fungsi untuk validasi voucher
+   public function validate_voucher()
+   {
+      $voucherCode = $this->input->post('voucherCode');
+      if (empty($voucherCode)) {
+         echo json_encode(['valid' => true, 'discount' => 0]); // Tidak ada diskon
+         return;
+      }
+
+      // validasi voucher
+      $voucherData = $this->Main_model->get_voucher_discount($voucherCode);
+      if ($voucherData['status'] !== null) {
+         if ($voucherData['status'] === '1') {
+            echo json_encode(['valid' => true, 'discount' => $voucherData['discount']]);
+         } else if ($voucherData['status'] === '0') {
+            echo json_encode(['valid' => false, 'message' => $voucherData['error']]);
+         }
+      } else {
+         echo json_encode(['valid' => false]);
+      }
+   }
+
+   public function booking()
+   {
+      $mdate = "TCK" . date('md');
+      $key = 'sku';
+      $max_sku = $this->Main_model->Max_data($mdate, $key, 'ticket')->row();
+      if ($max_sku->sku == NULL) {
+         $genr_sku = $mdate . '001'; // Jika tidak ada data sebelumnya, mulai dari 001
+      } else {
+         $genr_sku = $max_sku->sku;
+         $genr_sku = "TCK" . (intval(substr($genr_sku, 3, 10)) + 1); // Tambah 1 dari SKU terakhir
+      }
+      // Mengambil data POST dari request
+      $post_data = $this->input->post();
+      $post_data['sku'] = $genr_sku;
+      $this->Main_model->Input_Data($post_data, 'ticket');
+      $data['status'] = 'Success';
+      $this->output->set_content_type('application/json')->set_output(json_encode($data));
+   }
 }

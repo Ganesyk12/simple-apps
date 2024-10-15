@@ -120,4 +120,30 @@ class Main_model extends CI_Model
         $this->db->insert_batch($table, $data);
         return $this->db->affected_rows();
     }
+
+    // Voucher
+    public function get_voucher_discount($voucherCode)
+    {
+        $this->db->select('discount, status');
+        $this->db->where('code', $voucherCode);
+        $query = $this->db->get('voucher');
+        
+        // Jika data ditemukan
+        if ($query->num_rows() > 0) {
+            $voucher = $query->row();
+
+            if (isset($voucher->status)) {
+                // Cek status voucher
+                if ($voucher->status == '1') {
+                    return ['discount' => $voucher->discount, 'status' => '1']; // Voucher valid
+                } else {
+                    return ['status' => '0', 'error' => 'Voucher Kadaluarsa']; // Voucher kadaluarsa
+                }
+            } else {
+                return ['status' => false, 'error' => 'Status voucher tidak ditemukan']; // Jika status tidak ada
+            }
+        } else {
+            return ['status' => false, 'error' => 'Kode voucher salah'];
+        }
+    }
 }
