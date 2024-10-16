@@ -8,6 +8,7 @@ class Admin extends CI_Controller
       parent::__construct();
       $this->load->helper('url');
       $this->load->database('default');
+      $this->load->model('Main_model');
    }
 
    public function dashboard()
@@ -19,23 +20,5 @@ class Admin extends CI_Controller
       $this->load->view('admin/V_dashboard', $data);
       $this->load->view('base/admin/footer');
    }
-
-   public function transaction()
-   {
-      $trx = new Transaction();
-      $trx->index();
-   }
 }
 
-class Transaction extends CI_Controller
-{
-   public function index()
-   {
-      $data['title'] = 'Menu Bills';
-      $this->load->view('base/admin/header', $data);
-      $this->load->view('base/admin/navbar', $data);
-      $this->load->view('base/admin/sidebar', $data);
-      $this->load->view('admin/V_bills', $data);
-      $this->load->view('base/admin/footer');
-   }
-}

@@ -16,18 +16,6 @@ $config['charset'] = 'UTF-8';
 
 $config['enable_hooks'] = FALSE;
 
-/*
-|--------------------------------------------------------------------------
-| Class Extension Prefix
-|--------------------------------------------------------------------------
-|
-| This item allows you to set the filename/classname prefix when extending
-| native libraries.  For more information please see the user guide:
-|
-| https://codeigniter.com/userguide3/general/core_classes.html
-| https://codeigniter.com/userguide3/general/creating_libraries.html
-|
-*/
 $config['subclass_prefix'] = 'MY_';
 
 /*

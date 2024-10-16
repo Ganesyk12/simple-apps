@@ -29,13 +29,10 @@
                   <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                </div>
             </div>
-            <!-- ./col -->
             <div class="col-lg-3 col-6">
-               <!-- small box -->
                <div class="small-box bg-success">
                   <div class="inner">
                      <h3>53<sup style="font-size: 20px">%</sup></h3>
-
                      <p>Bounce Rate</p>
                   </div>
                   <div class="icon">
@@ -44,7 +41,6 @@
                   <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                </div>
             </div>
-            <!-- ./col -->
             <div class="col-lg-3 col-6">
                <!-- small box -->
                <div class="small-box bg-warning">
@@ -76,303 +72,18 @@
             </div>
             <!-- ./col -->
          </div>
-         <!-- /.row -->
-         <!-- Main row -->
          <div class="row">
-            <!-- Left col -->
             <section class="col-lg-7 connectedSortable">
-
-
-               <!-- DIRECT CHAT -->
-               <div class="card direct-chat direct-chat-primary">
-                  <div class="card-header">
-                     <h3 class="card-title">Direct Chat</h3>
-
-                     <div class="card-tools">
-                        <span title="3 New Messages" class="badge badge-primary">3</span>
-                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                           <i class="fas fa-minus"></i>
-                        </button>
-                        <button type="button" class="btn btn-tool" title="Contacts" data-widget="chat-pane-toggle">
-                           <i class="fas fa-comments"></i>
-                        </button>
-                        <button type="button" class="btn btn-tool" data-card-widget="remove">
-                           <i class="fas fa-times"></i>
-                        </button>
-                     </div>
-                  </div>
-                  <!-- /.card-header -->
-                  <div class="card-body">
-                     <!-- Conversations are loaded here -->
-                     <div class="direct-chat-messages">
-                        <!-- Message. Default to the left -->
-                        <div class="direct-chat-msg">
-                           <div class="direct-chat-infos clearfix">
-                              <span class="direct-chat-name float-left">Alexander Pierce</span>
-                              <span class="direct-chat-timestamp float-right">23 Jan 2:00 pm</span>
-                           </div>
-                           <!-- /.direct-chat-infos -->
-                           <img class="direct-chat-img" src="<?= base_url('assets/adminLTE') ?>/dist/img/avatar5.png" alt="message user image">
-                           <!-- /.direct-chat-img -->
-                           <div class="direct-chat-text">
-                              Is this template really for free? That's unbelievable!
-                           </div>
-                           <!-- /.direct-chat-text -->
-                        </div>
-                        <!-- /.direct-chat-msg -->
-
-                        <!-- Message to the right -->
-                        <div class="direct-chat-msg right">
-                           <div class="direct-chat-infos clearfix">
-                              <span class="direct-chat-name float-right">Sarah Bullock</span>
-                              <span class="direct-chat-timestamp float-left">23 Jan 2:05 pm</span>
-                           </div>
-                           <!-- /.direct-chat-infos -->
-                           <img class="direct-chat-img" src="<?= base_url('assets/adminLTE') ?>/dist/img/avatar5.png" alt="message user image">
-                           <!-- /.direct-chat-img -->
-                           <div class="direct-chat-text">
-                              You better believe it!
-                           </div>
-                           <!-- /.direct-chat-text -->
-                        </div>
-                        <!-- /.direct-chat-msg -->
-
-                        <!-- Message. Default to the left -->
-                        <div class="direct-chat-msg">
-                           <div class="direct-chat-infos clearfix">
-                              <span class="direct-chat-name float-left">Alexander Pierce</span>
-                              <span class="direct-chat-timestamp float-right">23 Jan 5:37 pm</span>
-                           </div>
-                           <!-- /.direct-chat-infos -->
-                           <img class="direct-chat-img" src="<?= base_url('assets/adminLTE') ?>/dist/img/avatar5.png" alt="message user image">
-                           <!-- /.direct-chat-img -->
-                           <div class="direct-chat-text">
-                              Working with AdminLTE on a great new app! Wanna join?
-                           </div>
-                           <!-- /.direct-chat-text -->
-                        </div>
-                        <!-- /.direct-chat-msg -->
-
-                        <!-- Message to the right -->
-                        <div class="direct-chat-msg right">
-                           <div class="direct-chat-infos clearfix">
-                              <span class="direct-chat-name float-right">Sarah Bullock</span>
-                              <span class="direct-chat-timestamp float-left">23 Jan 6:10 pm</span>
-                           </div>
-                           <!-- /.direct-chat-infos -->
-                           <img class="direct-chat-img" src="<?= base_url('assets/adminLTE') ?>/dist/img/avatar5.png" alt="message user image">
-                           <!-- /.direct-chat-img -->
-                           <div class="direct-chat-text">
-                              I would love to.
-                           </div>
-                           <!-- /.direct-chat-text -->
-                        </div>
-                        <!-- /.direct-chat-msg -->
-
-                     </div>
-                     <!--/.direct-chat-messages-->
-                  </div>
-                  <!-- /.card-body -->
-                  <div class="card-footer">
-                     <form action="#" method="post">
-                        <div class="input-group">
-                           <input type="text" name="message" placeholder="Type Message ..." class="form-control">
-                           <span class="input-group-append">
-                              <button type="button" class="btn btn-primary">Send</button>
-                           </span>
-                        </div>
-                     </form>
-                  </div>
-                  <!-- /.card-footer-->
-               </div>
-               <!--/.direct-chat -->
-
-               <!-- TO DO List -->
-               <div class="card">
-                  <div class="card-header">
-                     <h3 class="card-title">
-                        <i class="ion ion-clipboard mr-1"></i>
-                        To Do List
-                     </h3>
-
-                     <div class="card-tools">
-                        <ul class="pagination pagination-sm">
-                           <li class="page-item"><a href="#" class="page-link">&laquo;</a></li>
-                           <li class="page-item"><a href="#" class="page-link">1</a></li>
-                           <li class="page-item"><a href="#" class="page-link">2</a></li>
-                           <li class="page-item"><a href="#" class="page-link">3</a></li>
-                           <li class="page-item"><a href="#" class="page-link">&raquo;</a></li>
-                        </ul>
-                     </div>
-                  </div>
-                  <!-- /.card-header -->
-                  <div class="card-body">
-                     <ul class="todo-list" data-widget="todo-list">
-                        <li>
-                           <!-- drag handle -->
-                           <span class="handle">
-                              <i class="fas fa-ellipsis-v"></i>
-                              <i class="fas fa-ellipsis-v"></i>
-                           </span>
-                           <!-- checkbox -->
-                           <div class="icheck-primary d-inline ml-2">
-                              <input type="checkbox" value="" name="todo1" id="todoCheck1">
-                              <label for="todoCheck1"></label>
-                           </div>
-                           <!-- todo text -->
-                           <span class="text">Design a nice theme</span>
-                           <!-- Emphasis label -->
-                           <small class="badge badge-danger"><i class="far fa-clock"></i> 2 mins</small>
-                           <!-- General tools such as edit or delete-->
-                           <div class="tools">
-                              <i class="fas fa-edit"></i>
-                              <i class="fas fa-trash-o"></i>
-                           </div>
-                        </li>
-                        <li>
-                           <span class="handle">
-                              <i class="fas fa-ellipsis-v"></i>
-                              <i class="fas fa-ellipsis-v"></i>
-                           </span>
-                           <div class="icheck-primary d-inline ml-2">
-                              <input type="checkbox" value="" name="todo2" id="todoCheck2" checked>
-                              <label for="todoCheck2"></label>
-                           </div>
-                           <span class="text">Make the theme responsive</span>
-                           <small class="badge badge-info"><i class="far fa-clock"></i> 4 hours</small>
-                           <div class="tools">
-                              <i class="fas fa-edit"></i>
-                              <i class="fas fa-trash-o"></i>
-                           </div>
-                        </li>
-                        <li>
-                           <span class="handle">
-                              <i class="fas fa-ellipsis-v"></i>
-                              <i class="fas fa-ellipsis-v"></i>
-                           </span>
-                           <div class="icheck-primary d-inline ml-2">
-                              <input type="checkbox" value="" name="todo3" id="todoCheck3">
-                              <label for="todoCheck3"></label>
-                           </div>
-                           <span class="text">Let theme shine like a star</span>
-                           <small class="badge badge-warning"><i class="far fa-clock"></i> 1 day</small>
-                           <div class="tools">
-                              <i class="fas fa-edit"></i>
-                              <i class="fas fa-trash-o"></i>
-                           </div>
-                        </li>
-                        <li>
-                           <span class="handle">
-                              <i class="fas fa-ellipsis-v"></i>
-                              <i class="fas fa-ellipsis-v"></i>
-                           </span>
-                           <div class="icheck-primary d-inline ml-2">
-                              <input type="checkbox" value="" name="todo4" id="todoCheck4">
-                              <label for="todoCheck4"></label>
-                           </div>
-                           <span class="text">Let theme shine like a star</span>
-                           <small class="badge badge-success"><i class="far fa-clock"></i> 3 days</small>
-                           <div class="tools">
-                              <i class="fas fa-edit"></i>
-                              <i class="fas fa-trash-o"></i>
-                           </div>
-                        </li>
-                        <li>
-                           <span class="handle">
-                              <i class="fas fa-ellipsis-v"></i>
-                              <i class="fas fa-ellipsis-v"></i>
-                           </span>
-                           <div class="icheck-primary d-inline ml-2">
-                              <input type="checkbox" value="" name="todo5" id="todoCheck5">
-                              <label for="todoCheck5"></label>
-                           </div>
-                           <span class="text">Check your messages and notifications</span>
-                           <small class="badge badge-primary"><i class="far fa-clock"></i> 1 week</small>
-                           <div class="tools">
-                              <i class="fas fa-edit"></i>
-                              <i class="fas fa-trash-o"></i>
-                           </div>
-                        </li>
-                        <li>
-                           <span class="handle">
-                              <i class="fas fa-ellipsis-v"></i>
-                              <i class="fas fa-ellipsis-v"></i>
-                           </span>
-                           <div class="icheck-primary d-inline ml-2">
-                              <input type="checkbox" value="" name="todo6" id="todoCheck6">
-                              <label for="todoCheck6"></label>
-                           </div>
-                           <span class="text">Let theme shine like a star</span>
-                           <small class="badge badge-secondary"><i class="far fa-clock"></i> 1 month</small>
-                           <div class="tools">
-                              <i class="fas fa-edit"></i>
-                              <i class="fas fa-trash-o"></i>
-                           </div>
-                        </li>
-                     </ul>
-                  </div>
-                  <!-- /.card-body -->
-                  <div class="card-footer clearfix">
-                     <button type="button" class="btn btn-primary float-right"><i class="fas fa-plus"></i> Add item</button>
-                  </div>
-               </div>
-               <!-- /.card -->
             </section>
-            <!-- /.Left col -->
-            <!-- right col (We are only adding the ID to make the widgets sortable)-->
             <section class="col-lg-5 connectedSortable">
-
-               <!-- Calendar -->
-               <div class="card bg-gradient-success">
-                  <div class="card-header border-0">
-
-                     <h3 class="card-title">
-                        <i class="far fa-calendar-alt"></i>
-                        Calendar
-                     </h3>
-                     <!-- tools card -->
-                     <div class="card-tools">
-                        <!-- button with a dropdown -->
-                        <div class="btn-group">
-                           <button type="button" class="btn btn-success btn-sm dropdown-toggle" data-toggle="dropdown" data-offset="-52">
-                              <i class="fas fa-bars"></i>
-                           </button>
-                           <div class="dropdown-menu" role="menu">
-                              <a href="#" class="dropdown-item">Add new event</a>
-                              <a href="#" class="dropdown-item">Clear events</a>
-                              <div class="dropdown-divider"></div>
-                              <a href="#" class="dropdown-item">View calendar</a>
-                           </div>
-                        </div>
-                        <button type="button" class="btn btn-success btn-sm" data-card-widget="collapse">
-                           <i class="fas fa-minus"></i>
-                        </button>
-                        <button type="button" class="btn btn-success btn-sm" data-card-widget="remove">
-                           <i class="fas fa-times"></i>
-                        </button>
-                     </div>
-                     <!-- /. tools -->
-                  </div>
-                  <!-- /.card-header -->
-                  <div class="card-body pt-0">
-                     <!--The calendar -->
-                     <div id="calendar" style="width: 100%"></div>
-                  </div>
-                  <!-- /.card-body -->
-               </div>
-               <!-- /.card -->
             </section>
-            <!-- right col -->
          </div>
-         <!-- /.row (main row) -->
-      </div><!-- /.container-fluid -->
+      </div>
    </section>
-   <!-- /.content -->
 </div>
 <footer class="main-footer">
    <strong>Copyright &copy; 2024. Arena Bocil </strong>
    All rights reserved.
    <div class="float-right d-none d-sm-inline-block">
-      <!-- <b>Version</b> 3.2.0 -->
    </div>
 </footer>

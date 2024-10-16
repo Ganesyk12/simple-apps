@@ -3,6 +3,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Main_model extends CI_Model
 {
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load->library('email');
+    }
+
     public function get_tables_where($tables, $cari, $where, $iswhere)
     {
         $search = htmlspecialchars($_POST['search']['value']);
@@ -67,8 +73,6 @@ class Main_model extends CI_Model
 
         // Clear cache
         $this->db->flush_cache();
-
-        // Prepare callback response for DataTables
         $callback = array(
             'draw' => $_POST['draw'],
             'recordsTotal' => $sql_count,
@@ -127,23 +131,64 @@ class Main_model extends CI_Model
         $this->db->select('discount, status');
         $this->db->where('code', $voucherCode);
         $query = $this->db->get('voucher');
-        
-        // Jika data ditemukan
         if ($query->num_rows() > 0) {
             $voucher = $query->row();
-
+            // cek status voucher
             if (isset($voucher->status)) {
-                // Cek status voucher
                 if ($voucher->status == '1') {
-                    return ['discount' => $voucher->discount, 'status' => '1']; // Voucher valid
+                    return ['discount' => $voucher->discount, 'status' => '1'];
                 } else {
-                    return ['status' => '0', 'error' => 'Voucher Kadaluarsa']; // Voucher kadaluarsa
+                    return ['status' => '0', 'error' => 'Voucher Kadaluarsa'];
                 }
             } else {
-                return ['status' => false, 'error' => 'Status voucher tidak ditemukan']; // Jika status tidak ada
+                return ['status' => false, 'error' => 'Status voucher tidak ditemukan'];
             }
         } else {
             return ['status' => false, 'error' => 'Kode voucher salah'];
+        }
+    }
+
+    // send_email
+    public function send_email($to, $name, $subject, $message, $template)
+    {
+        $config = array(
+            'protocol'  => 'smtp',
+            'smtp_crypto' => 'ssl',
+            'smtp_host' => 'smtp.gmail.com',
+            'smtp_port' => 465,
+            'smtp_user' => '' /*EMAIL*/,
+            'smtp_pass' => '' /*SMTP PASS*/,
+            'mailtype'  => 'html',
+            'charset'   => 'utf-8',
+            'newline'   => "\r\n"
+        );
+
+        // Inisialisasi konfigurasi
+        $this->email->initialize($config);
+
+        $data['title'] = $subject;
+        $data['name'] = $name;
+        $data['message'] = $message;
+
+        if ($template == 'subscription') {
+            $email_template = $this->load->view('email/subs_template', $data, TRUE);
+        } else if ($template == 'booking') {
+            $email_template = $this->load->view('email/booking_template', $data, TRUE);
+        } else {
+            $email_template = $this->load->view('email/news_template', $data, TRUE);
+        }
+
+        // Set pengirim dan penerima
+        $this->email->from($config['smtp_user'], 'Arena Bocil');
+        $this->email->to($to);
+        $this->email->subject($subject);
+        $this->email->message($email_template);
+
+        if ($this->email->send()) {
+            return true;
+        } else {
+            log_message('error', 'Email error: ' . $this->email->print_debugger());
+            return false;
         }
     }
 }

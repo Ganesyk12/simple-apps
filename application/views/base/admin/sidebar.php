@@ -29,7 +29,7 @@
                </ul>
             </li>
             <li class="nav-item">
-               <a href="<?= base_url('admin/transaction') ?>" class="nav-link <?= ($this->uri->segment(1) == 'admin/transaction') ? 'active' : '' ?>">
+               <a href="<?= base_url('Transaction') ?>" class="nav-link <?= ($this->uri->segment(1) == 'Transaction') ? 'active' : '' ?>">
                   <i class="nav-icon fas fa-th"></i>
                   <p>Booking List
                      <span class="right badge badge-danger">New</span>

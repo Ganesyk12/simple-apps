@@ -15,83 +15,83 @@
          <h1 class="mb-5 display-4">Fasilitas</h1>
       </div>
       <div class="row g-5 justify-content-center">
-         <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.1s">
-            <div class="events-item bg-primary rounded">
-               <div class="events-inner position-relative">
-                  <div class="d-flex justify-content-center bg-secondary rounded position-absolute" style="top: -10px; left: 50%; transform: translateX(-50%); z-index: 10;">
-                     <span class="nav-link text-white rounded-pill">
-                        Lantai 1
-                     </span>
-                  </div>
-                  <div class="events-img overflow-hidden rounded-circle position-relative">
-                     <img src="<?= base_url('assets') ?>/img/lantai-1.jpg" class="img-fluid w-80 h-40 rounded-circle" alt="Image">
-                  </div>
-                  <div class="d-flex justify-content-between px-4 py-2 bg-secondary">
-                     <a href="#" class="h4"><small class="text-white">Fasilitas :</small></a>
-                     <small class="text-white"></small>
+         <div class="col-md-6 col-lg-6 col-xl-4 wow fadeIn" data-wow-delay="0.1s">
+            <div class="program-item rounded position-relative">
+               <div class="d-flex justify-content-center bg-primary rounded position-absolute" style="top: -20px; left: 50%; transform: translateX(-50%); z-index: 10;">
+                  <span class="nav-link text-white rounded-pill">
+                     Lantai 1
+                  </span>
+               </div>
+               <div class="program-img position-relative">
+                  <div class="overflow-hidden img-border-radius">
+                     <img src="<?= base_url('assets') ?>/img/lantai-1.jpg" class="img-fluid w-100" alt="Image" onmouseover="zoomIn(this)" onmouseout="zoomOut(this)">
                   </div>
                </div>
-               <div class="events-text p-3 border border-primary bg-white border-top-0 rounded-bottom">
-                  <ul class="mb-0 mt-3">
-                     <li>Mainan Tematik (Polisi, Dokter, Cafe, Supermarket dll)</li>
-                     <li>Mobil-mobilan</li>
-                     <li>Kincir Putar</li>
-                     <li>Perpustakaan</li>
-                  </ul>
-               </div>
-            </div>
-         </div>
-         <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.1s">
-            <div class="events-item bg-primary rounded">
-               <div class="events-inner position-relative">
-                  <div class="d-flex justify-content-center bg-secondary rounded position-absolute" style="top: -10px; left: 50%; transform: translateX(-50%); z-index: 10;">
-                     <span class="nav-link text-white rounded-pill">
-                        Lantai 2
-                     </span>
+               <div class="program-text bg-white px-4 pb-3">
+                  <div class="program-text-inner">
+                     <a href="#" class="h4">Wahana permainan :</a>
+                     <p class="mt-3 mb-0">
+                     <ul class="mb-0 mt-3">
+                        <li>Mainan Tematik (Polisi, Dokter, Cafe, Supermarket dll)</li>
+                        <li>Mobil-mobilan</li>
+                        <li>Kincir Putar</li>
+                        <li>Perpustakaan</li>
+                     </ul>
+                     </p>
                   </div>
-                  <div class="events-img overflow-hidden rounded-circle position-relative">
-                     <img src="<?= base_url('assets') ?>/img/construction.jpg" class="img-fluid w-80 h-40 rounded-circle" alt="Image">
-                  </div>
-                  <div class="d-flex justify-content-between px-4 py-2 bg-secondary">
-                     <a href="#" class="h4"><small class="text-white">Fasilitas :</small></a>
-                     <small class="text-white"></small>
-                  </div>
-               </div>
-               <div class="events-text p-3 border border-primary bg-white border-top-0 rounded-bottom">
-                  <ul class="mb-0 mt-3">
-                     <li>Mandi Bola</li>
-                     <li>Rainbow Slide</li>
-                     <li>Flying Fox</li>
-                     <li>Trampolin</li>
-                     <br>
-                  </ul>
                </div>
             </div>
          </div>
-         <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.1s">
-            <div class="events-item bg-primary rounded">
-               <div class="events-inner position-relative">
-                  <div class="d-flex justify-content-center bg-secondary rounded position-absolute" style="top: -10px; left: 50%; transform: translateX(-50%); z-index: 10;">
-                     <span class="nav-link text-white rounded-pill">
-                        Lantai 3
-                     </span>
-                  </div>
-                  <div class="events-img overflow-hidden rounded-circle position-relative">
-                     <img src="<?= base_url('assets') ?>/img/lantai-3.jpg" class="img-fluid w-80 h-40 rounded-circle" alt="Image">
-                  </div>
-                  <div class="d-flex justify-content-between px-4 py-2 bg-secondary">
-                     <a href="#" class="h4"><small class="text-white">Fasilitas :</small></a>
-                     <small class="text-white"></small>
+         <div class="col-md-6 col-lg-6 col-xl-4 wow fadeIn" data-wow-delay="0.3s">
+            <div class="program-item rounded position-relative">
+               <div class="d-flex justify-content-center bg-primary text-white position-absolute"
+                  style="top: -20px; left: 50%; transform: translateX(-50%); z-index: 10; padding: 5px 15px; border-radius: 30px;">
+                  <span>Lantai 2</span>
+               </div>
+               <div class="program-img position-relative">
+                  <div class="overflow-hidden img-border-radius">
+                     <img src="<?= base_url('assets') ?>/img/construction.jpg" class="img-fluid w-100" alt="Image" onmouseover="zoomIn(this)" onmouseout="zoomOut(this)">
                   </div>
                </div>
-               <div class="events-text p-3 border border-primary bg-white border-top-0 rounded-bottom">
-                  <ul class="mb-0 mt-3">
-                     <li>Kereta-kereta an</li>
-                     <li>Perosotan dan ayunan Balita</li>
-                     <li>Baskeball</li>
-                     <li>Lego</li>
-                     <li>Mainan Montessori</li>
-                  </ul>
+               <div class="program-text bg-white px-4 pb-3">
+                  <div class="program-text-inner">
+                     <a href="#" class="h4">Wahana permainan :</a>
+                     <p class="mt-3 mb-0">
+                     <ul class="mb-0 mt-3">
+                        <li>Mandi Bola</li>
+                        <li>Rainbow Slide</li>
+                        <li>Flying Fox</li>
+                        <li>Trampolin</li>
+                     </ul>
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-6 col-lg-6 col-xl-4 wow fadeIn" data-wow-delay="0.5s">
+            <div class="program-item rounded position-relative">
+               <div class="d-flex justify-content-center bg-primary text-white position-absolute"
+                  style="top: -20px; left: 50%; transform: translateX(-50%); z-index: 10; padding: 5px 15px; border-radius: 30px;">
+                  <span>Lantai 3</span>
+               </div>
+               <div class="program-img position-relative">
+                  <div class="overflow-hidden img-border-radius">
+                     <img src="<?= base_url('assets') ?>/img/lantai-3.jpg" class="img-fluid w-100" alt="Image" onmouseover="zoomIn(this)" onmouseout="zoomOut(this)">
+                  </div>
+               </div>
+               <div class="program-text bg-white px-4 pb-3">
+                  <div class="program-text-inner">
+                     <a href="#" class="h4">Wahana permainan :</a>
+                     <p class="mt-3 mb-0">
+                     <ul class="mb-0 mt-3">
+                        <li>Kereta-keretaan</li>
+                        <li>Perosotan dan ayunan Balita</li>
+                        <li>Basketball</li>
+                        <li>Lego</li>
+                        <li>Mainan Montessori</li>
+                     </ul>
+                     </p>
+                  </div>
                </div>
             </div>
          </div>

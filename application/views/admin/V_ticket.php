@@ -3,7 +3,7 @@
       <div class="container-fluid">
          <div class="row mb-2">
             <div class="col-sm-6">
-               <h1 class="m-0">Dashboard Ticket & Promo</h1>
+               <h1 class="m-0">Dashboard Voucher</h1>
             </div>
             <div class="col-sm-6">
                <ol class="breadcrumb float-sm-right">
@@ -20,7 +20,6 @@
             <div class="col-12">
                <div class="card">
                   <div class="card-header">
-                     <!-- <button type="button" class="btn btn-primary mb-2 bg-primary" id="addbtn" data-toggle="modal" data-target="#mainModal" Onclick="view_modal('1','Add')" href="#"> -->
                      <button type="button" class="btn btn-primary mb-2 bg-primary" id="addbtn" data-toggle="modal" data-target="#mainModal" href="#">
                         <i class="fa fa-plus"></i> Add Data
                      </button>
@@ -29,11 +28,14 @@
                      <table id="main-table" class="table display nowrap table-striped table-bordered">
                         <thead class="text-center">
                            <tr>
-                              <th>Tanggal</th>
-                              <th>Event</th>
-                              <th>Pict</th>
-                              <th>Waktu</th>
-                              <th>Content</th>
+                              <th>Code</th>
+                              <th>Discount</th>
+                              <th>Valid From</th>
+                              <th>Valid For</th>
+                              <th>Status</th>
+                              <th>Created At</th>
+                              <th>Update At</th>
+                              <th>Action</th>
                            </tr>
                         </thead>
                         <tbody></tbody>

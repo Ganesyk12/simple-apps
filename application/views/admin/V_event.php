@@ -20,7 +20,6 @@
             <div class="col-12">
                <div class="card">
                   <div class="card-header">
-                     <!-- <button type="button" class="btn btn-primary mb-2 bg-primary" id="addbtn" data-toggle="modal" data-target="#mainModal" Onclick="view_modal('1','Add')" href="#"> -->
                      <button type="button" class="btn btn-primary mb-2 bg-primary" id="addbtn" data-toggle="modal" data-target="#mainModal" href="#">
                         <i class="fa fa-plus"></i> Add Data
                      </button>
@@ -29,12 +28,12 @@
                      <table id="main-table" class="table display nowrap table-striped table-bordered">
                         <thead class="text-center">
                            <tr>
-                              <th>Tanggal</th> <!-- event_start + event_end -->
-                              <th>Event</th> <!-- title -->
-                              <th>Picture</th> <!-- img-url -->
-                              <th>Waktu</th> <!-- event_start + event_end -->
-                              <th>Content</th> <!-- content -->
-                              <th>Action</th> <!-- content -->
+                              <th>Tanggal</th>
+                              <th>Event</th>
+                              <th>Picture</th>
+                              <th>Waktu</th>
+                              <th>Content</th>
+                              <th>Action</th>
                            </tr>
                         </thead>
                         <tbody></tbody>

@@ -9,11 +9,14 @@
                <div class="border border-primary p-3 rounded bg-light">
                   <h5 class="mb-3">Newsletter</h5>
                   <div class="row align-items-center mb-3">
-                     <div class="position-relative col-md-12 col-lg-12 border border-primary rounded" style="max-width: 400px;">
-                        <form id="newsletterForm">
+                     <form id="newsletterForm" role="form">
+                        <div class="position-relative col-md-12 col-lg-12 mb-3 border border-primary rounded" style="max-width: 400px;">
+                           <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your Name" id="name" name="name" required>
+                        </div>
+                        <div class="position-relative col-md-12 col-lg-12 border border-primary rounded" style="max-width: 400px;">
                            <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="email" placeholder="Your email" id="email" name="email" required>
-                        </form>
-                     </div>
+                        </div>
+                     </form>
                   </div>
                   <div class="row align-items-center">
                      <div class="col-auto">
@@ -113,33 +116,63 @@
 <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>
 </body>
 <script>
-   function submitEmail() {
-      var email = $('#email').val(); // Mengambil nilai input email dari form
+   $('.select2').select2();
+   var Toast = Swal.mixin({
+      toast: true,
+      position: 'center',
+      showConfirmButton: false,
+      timer: 2000
+   });
 
-      if (email) {
-         // Mengirimkan data email menggunakan jQuery AJAX
+   $(document).ready(function() {
+      $('#submitButton').on('click', function() {
+         submitEmail();
+      });
+   });
+
+   function submitEmail() {
+      var email = $('#email').val().trim();
+      var name = $('#name').val().trim();
+
+      console.log('Email:', email);
+      console.log('Name:', name);
+      if (name && email) {
+         // Jika email dan nama tidak kosong, lanjutkan ke proses berikutnya
+         var fdata = new FormData();
+         fdata.append('email', email);
+         fdata.append('name', name);
+
          $.ajax({
-            url: '<?= base_url('Service/subscription') ?>', // Arahkan ke controller yang akan menangani proses
+            url: '<?= base_url("your_controller_method") ?>',
             type: 'POST',
-            data: {
-               email: email
-            }, // Kirim data email
-            dataType: 'json',
+            data: fdata,
+            contentType: false,
+            processData: false,
             success: function(response) {
                if (response.status === 'Success') {
-                  alert('Subscription successful!');
-                  $('#email').val('');
+                  Toast.fire({
+                     icon: 'success',
+                     title: response.message
+                  });
                } else {
-                  alert(response.message); // Menampilkan pesan error jika ada
+                  Toast.fire({
+                     icon: 'error',
+                     title: response.message
+                  });
                }
             },
-            error: function(xhr, status, error) {
-               console.error('Error:', error);
-               alert('Terjadi kesalahan, silakan coba lagi.');
+            error: function() {
+               Toast.fire({
+                  icon: 'error',
+                  title: 'Error submitting data.'
+               });
             }
          });
       } else {
-         alert('Mohon masukkan alamat email yang valid.');
+         Toast.fire({
+            icon: 'warning',
+            title: 'Mohon masukkan nama dan alamat email yang valid.'
+         });
       }
    }
 </script>

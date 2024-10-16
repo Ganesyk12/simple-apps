@@ -37,17 +37,12 @@
                render: function(data, type, row) {
                   function formatDate(dateString) {
                      const date = new Date(dateString);
-                     const day = String(date.getDate()).padStart(2, '0'); // Mendapatkan hari
-                     const month = String(date.getMonth() + 1).padStart(2, '0'); // Mendapatkan bulan (0-indexed)
-                     const year = date.getFullYear(); // Mendapatkan tahun
-
-                     return `${day}-${month}-${year}`; // Format d-m-Y
+                     const day = String(date.getDate()).padStart(2, '0');
+                     const month = String(date.getMonth() + 1).padStart(2, '0');
+                     const year = date.getFullYear();
+                     return `${day}-${month}-${year}`;
                   }
-
-                  // Mengubah format tanggal untuk event_start dan event_end
                   const dateCreated = formatDate(row.date_created);
-
-                  // Mengembalikan string yang diformat
                   return `${dateCreated}`;
                }
 
@@ -66,24 +61,17 @@
             {
                "data": "event_start",
                render: function(data, type, row) {
-                  // Fungsi untuk mengubah format tanggal dari Y-m-d ke d-m-Y
                   function formatDate(dateString) {
                      const date = new Date(dateString);
-                     const day = String(date.getDate()).padStart(2, '0'); // Mendapatkan hari
-                     const month = String(date.getMonth() + 1).padStart(2, '0'); // Mendapatkan bulan (0-indexed)
-                     const year = date.getFullYear(); // Mendapatkan tahun
-
-                     return `${day}-${month}-${year}`; // Format d-m-Y
+                     const day = String(date.getDate()).padStart(2, '0');
+                     const month = String(date.getMonth() + 1).padStart(2, '0');
+                     const year = date.getFullYear();
+                     return `${day}-${month}-${year}`;
                   }
-
-                  // Mengubah format tanggal untuk event_start dan event_end
                   const startDate = formatDate(row.event_start);
                   const endDate = formatDate(row.event_end);
-
-                  // Mengembalikan string yang diformat
                   return `${startDate} - ${endDate}`;
                }
-
             },
             {
                "data": "content"
